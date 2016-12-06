@@ -18,45 +18,8 @@
           <layoutScriptFile layoutName="layout"/>
         </layoutScriptsDirectory>
       </layoutsDirectory>
-      <modulesDirectory>
-        <moduleDirectory moduleName="api">
-          <configsDirectory enabled="false"/>
-          <controllersDirectory>
-            <controllerFile controllerName="People">
-            <actionMethod actionName="index"/>
-            </controllerFile>
-            <controllerFile controllerName="States">
-              <actionMethod actionName="index"/>
-            </controllerFile>
-            <controllerFile controllerName="Visits">
-              <actionMethod actionName="index"/>
-            </controllerFile>
-          </controllersDirectory>
-          <formsDirectory enabled="false"/>
-          <layoutsDirectory enabled="false">
-            <layoutScriptsDirectory enabled="false"/>
-          </layoutsDirectory>
-          <modelsDirectory>
-            <dbTableDirectory enabled="false"/>
-          </modelsDirectory>
-          <servicesDirectory enabled="false"/>
-          <viewsDirectory>
-            <viewScriptsDirectory>
-             <viewControllerScriptsDirectory forControllerName="People">
-              <viewScriptFile forActionName="index"/>
-            </viewControllerScriptsDirectory>
-            <viewControllerScriptsDirectory forControllerName="States">
-              <viewScriptFile forActionName="index"/>
-            </viewControllerScriptsDirectory>
-            <viewControllerScriptsDirectory forControllerName="Visits">
-              <viewScriptFile forActionName="index"/>
-            </viewControllerScriptsDirectory>
-            </viewScriptsDirectory>
-            <viewHelpersDirectory/>
-            <viewFiltersDirectory/>
-          </viewsDirectory>
-        </moduleDirectory>
-      </modulesDirectory>
+      <modelsDirectory/>
+      <modulesDirectory enabled="false"/>
       <servicesDirectory enabled="false"/>
       <viewsDirectory>
         <viewScriptsDirectory>
