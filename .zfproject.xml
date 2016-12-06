@@ -22,7 +22,17 @@
       <modulesDirectory>
         <moduleDirectory moduleName="api">
           <configsDirectory enabled="false"/>
-          <controllersDirectory/>
+          <controllersDirectory>
+            <controllerFile controllerName="People">
+              <actionMethod actionName="index"/>
+            </controllerFile>
+            <controllerFile controllerName="States">
+              <actionMethod actionName="index"/>
+            </controllerFile>
+            <controllerFile controllerName="Visits">
+              <actionMethod actionName="index"/>
+            </controllerFile>
+          </controllersDirectory>
           <formsDirectory enabled="false"/>
           <layoutsDirectory enabled="false">
             <layoutScriptsDirectory enabled="false"/>
@@ -30,7 +40,17 @@
           <modelsDirectory/>
           <servicesDirectory enabled="false"/>
           <viewsDirectory>
-            <viewScriptsDirectory/>
+            <viewScriptsDirectory>
+              <viewControllerScriptsDirectory forControllerName="People">
+                <viewScriptFile forActionName="index"/>
+              </viewControllerScriptsDirectory>
+              <viewControllerScriptsDirectory forControllerName="States">
+                <viewScriptFile forActionName="index"/>
+              </viewControllerScriptsDirectory>
+              <viewControllerScriptsDirectory forControllerName="Visits">
+                <viewScriptFile forActionName="index"/>
+              </viewControllerScriptsDirectory>
+            </viewScriptsDirectory>
             <viewHelpersDirectory/>
             <viewFiltersDirectory/>
           </viewsDirectory>
