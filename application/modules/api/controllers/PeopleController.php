@@ -14,6 +14,11 @@ class Api_PeopleController extends Zend_Controller_Action
         echo "people controller";
     }
 
+    public function peopleAction()
+    {
+        echo "people action yo";
+    }
+
 
 }
 
