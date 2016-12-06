@@ -1,6 +1,6 @@
 <?php
 
-//zf configure db-adapter "adapter=PDO_MYSQL&dbname=[myDB]&host=[]&username=[root]&password=[root]" -s development
+//zf configure db-adapter "adapter=PDO_MYSQL&dbname=[myDB]&host=[localhost]&username=[root]&password=[root]" -s development
 
 // Define variables. 
 $host = "localhost";
@@ -147,7 +147,7 @@ $insertData .= "INSERT INTO Visits (p_id, s_id, date_visited)
 if($connection->multi_query($insertData) === TRUE)
 {
 	$lastID = $connection->insert_id;
-	echo "insertData create successfully. Last inserted ID is: \n" . $lastID;
+	echo "insertData create successfully. Last inserted ID is: " . $lastID . "\n";
 }
 
 else
