@@ -1,6 +1,6 @@
 <?php
 
-class Api_VisitsController extends Zend_Controller_Action
+class Api_ErrorController extends Zend_Controller_Action
 {
 
     public function init()
@@ -11,7 +11,8 @@ class Api_VisitsController extends Zend_Controller_Action
     public function indexAction()
     {
         // action body
-        echo "visits controller";
     }
+
+
 }
 

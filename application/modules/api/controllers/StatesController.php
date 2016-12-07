@@ -13,7 +13,5 @@ class Api_StatesController extends Zend_Controller_Action
         // action body
         echo "states controller";
     }
-
-
 }
 
