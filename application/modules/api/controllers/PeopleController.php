@@ -17,3 +17,5 @@ class Api_PeopleController extends Zend_Controller_Action
     }
 }
 
+?>
+

@@ -61,7 +61,7 @@ class API_Model_PeopleMapper
                 ->setFavoriteFood($row->favoriteFood);
     }
 
-    public function fetchall()
+    public function fetchAll()
     {
         $resultSet = $this->getDbTable()->fetchall;
         $entries = array();

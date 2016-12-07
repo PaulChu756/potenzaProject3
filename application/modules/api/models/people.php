@@ -7,6 +7,7 @@ class API_Model_People
     protected $_lastName;
     protected $_favoriteFood;
 
+/*
     public function construct(array $options = null)
     {
         if(is_array($options))
@@ -14,11 +15,11 @@ class API_Model_People
             $this->setOptions($options);
         }
     }
+*/
 
     public function _set($name, $value)
     {
         $method = 'set' . $name;
-
         if(('mapper' == $name) || !method_exists($this, $method))
         {
             throw new Exception('Invalid people proptery');
@@ -37,6 +38,7 @@ class API_Model_People
         $this->$method();
     }
 
+/*
     public function setOptions(array $options)
     {
         $methods = get_class_methods($this);
@@ -50,6 +52,7 @@ class API_Model_People
         }
         return $this;
     }
+*/
 
     public function setId($id)
     {
