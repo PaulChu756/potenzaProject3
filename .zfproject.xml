@@ -18,9 +18,10 @@
           <layoutScriptFile layoutName="layout"/>
         </layoutScriptsDirectory>
       </layoutsDirectory>
-      <modelsDirectory/>
+      <modelsDirectory>
+      </modelsDirectory>
       <modulesDirectory>
-        <moduleDirectory moduleName="api">
+        <moduleDirectory moduleName="API">
           <configsDirectory enabled="false"/>
           <controllersDirectory>
             <controllerFile controllerName="People">
@@ -43,7 +44,12 @@
           <layoutsDirectory enabled="false">
             <layoutScriptsDirectory enabled="false"/>
           </layoutsDirectory>
-          <modelsDirectory/>
+          <modelsDirectory>
+            <modelFile modelName="PeopleMapper"/>
+            <dbTableDirectory>
+              <dbTableFile dbTableName="People"/>
+            </dbTableDirectory>
+          </modelsDirectory>
           <servicesDirectory enabled="false"/>
           <viewsDirectory>
             <viewScriptsDirectory>
