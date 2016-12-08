@@ -7,38 +7,34 @@ class API_Model_People
     protected $_lastName;
     protected $_favoriteFood;
 
-/*
-    public function construct(array $options = null)
+    public function __construct(array $options = null)
     {
         if(is_array($options))
         {
             $this->setOptions($options);
         }
     }
-*/
 
-    public function _set($name, $value)
+    public function __set($name, $value)
     {
         $method = 'set' . $name;
         if(('mapper' == $name) || !method_exists($this, $method))
         {
-            throw new Exception('Invalid people proptery');
+            throw new Exception('Invalid set people proptery');
         }
         $this->$method($value);
     }
-
-    public function _get($name)
+    public function __get($name)
     {
         $method = 'get' . $name;
         
         if(('mapper' == $name) || !method_exists($this, $method))
         {
-            throw new Exception('Invalid people proptery');
+            throw new Exception('Invalid get people proptery');
         }
         $this->$method();
     }
 
-/*
     public function setOptions(array $options)
     {
         $methods = get_class_methods($this);
@@ -52,11 +48,10 @@ class API_Model_People
         }
         return $this;
     }
-*/
 
     public function setId($id)
     {
-        $this->_id = (int) $id;
+        $this->_id = (string) $id;
         return $this;
     }
     public function getId()

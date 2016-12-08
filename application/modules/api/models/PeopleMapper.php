@@ -63,12 +63,12 @@ class API_Model_PeopleMapper
 
     public function fetchAll()
     {
-        $resultSet = $this->getDbTable()->fetchall;
+        $resultSet = $this->getDbTable()->fetchAll;
         $entries = array();
         foreach($resultSet as $row)
         {
             $entry = new API_Model_People();
-            $entry->setId($row-id)
+            $entry->setId($row->id)
                     ->setFirstName($row->firstName)
                     ->setLastName($row->lastName)
                     ->setFavoriteFood($row->favoriteFood);

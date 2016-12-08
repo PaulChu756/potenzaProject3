@@ -36,19 +36,17 @@
             <controllerFile controllerName="Index">
               <actionMethod actionName="index"/>
             </controllerFile>
-            <controllerFile controllerName="Error">
-              <actionMethod actionName="index"/>
-            </controllerFile>
           </controllersDirectory>
           <formsDirectory enabled="false"/>
           <layoutsDirectory enabled="false">
             <layoutScriptsDirectory enabled="false"/>
           </layoutsDirectory>
           <modelsDirectory>
-            <modelFile modelName="PeopleMapper"/>
             <dbTableDirectory>
               <dbTableFile dbTableName="People"/>
             </dbTableDirectory>
+            <modelFile modelName="People"/>
+            <modelFile modelName="PeopleMapper"/>
           </modelsDirectory>
           <servicesDirectory enabled="false"/>
           <viewsDirectory>
@@ -65,8 +63,6 @@
               <viewControllerScriptsDirectory forControllerName="Index">
                 <viewScriptFile forActionName="index"/>
               </viewControllerScriptsDirectory>
-              <viewControllerScriptsDirectory forControllerName="Error">
-                <viewScriptFile forActionName="index"/>
               </viewControllerScriptsDirectory>
             </viewScriptsDirectory>
             <viewHelpersDirectory/>
@@ -97,9 +93,6 @@
       <sessionsDirectory enabled="false"/>
       <uploadsDirectory enabled="false"/>
     </dataDirectory>
-    <docsDirectory>
-      <file filesystemName="README.txt"/>
-    </docsDirectory>
     <libraryDirectory>
       <zfStandardLibraryDirectory enabled="false"/>
     </libraryDirectory>
