@@ -32,7 +32,7 @@ class API_Model_People
         {
             throw new Exception('Invalid get people proptery');
         }
-        $this->$method();
+        return $this->$method();
     }
 
     public function setOptions(array $options)
@@ -51,7 +51,7 @@ class API_Model_People
 
     public function setId($id)
     {
-        $this->_id = (string) $id;
+        $this->_id = (int) $id;
         return $this;
     }
     public function getId()

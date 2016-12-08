@@ -13,7 +13,7 @@ class API_Model_PeopleMapper
         }
         if(!$dbTable instanceof Zend_Db_Table_Abstract)
         {
-            throw new Exception("Invalid table data gateway provided");
+            throw new Exception('Invalid table data gateway provided');
         }
         $this->_dbTable = $dbTable;
         return $this;
@@ -31,9 +31,9 @@ class API_Model_PeopleMapper
     public function save(API_Model_People $people)
     {
         $data = array(
-            'firstName' => $people->getFirstName(),
-            'lastName' => $people->getLastName(),
-            'favoriteFood' => $people->getFavoriteFood(),
+            'firstName'     => $people->getFirstName(),
+            'lastName'      => $people->getLastName(),
+            'favoriteFood'  => $people->getFavoriteFood(),
         );
 
         if(null === ($id = $people->getId()))
@@ -63,7 +63,7 @@ class API_Model_PeopleMapper
 
     public function fetchAll()
     {
-        $resultSet = $this->getDbTable()->fetchAll;
+        $resultSet = $this->getDbTable()->fetchAll();
         $entries = array();
         foreach($resultSet as $row)
         {

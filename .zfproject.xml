@@ -45,8 +45,8 @@
             <dbTableDirectory>
               <dbTableFile dbTableName="People"/>
             </dbTableDirectory>
-            <modelFile modelName="People"/>
             <modelFile modelName="PeopleMapper"/>
+            <modelFile modelName="People"/>
           </modelsDirectory>
           <servicesDirectory enabled="false"/>
           <viewsDirectory>
