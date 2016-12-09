@@ -220,7 +220,7 @@ For terms of use, see http://www.unicode.org/copyright.html
 			<territory type="PH">Filipino</territory>
 			<territory type="PK">Pakistani</territory>
 			<territory type="PL">Polandi</territory>
-			<territory type="PM">SantAPIeli na Mikeloni</territory>
+			<territory type="PM">Santapieli na Mikeloni</territory>
 			<territory type="PN">Pitikeluni</territory>
 			<territory type="PR">Pwetoliko</territory>
 			<territory type="PS">Nchingu wa Magalibi wa Mpanda wa kuGaza wa kuPales</territory>
@@ -408,7 +408,7 @@ For terms of use, see http://www.unicode.org/copyright.html
 							<day type="sat">Ll1</day>
 						</dayWidth>
 						<dayWidth type="wide">
-							<day type="sun">Liduva lyAPIli</day>
+							<day type="sun">Liduva lyapili</day>
 							<day type="mon">Liduva lyatatu</day>
 							<day type="tue">Liduva lyanchechi</day>
 							<day type="wed">Liduva lyannyano</day>

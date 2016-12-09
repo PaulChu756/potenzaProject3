@@ -55,7 +55,7 @@ class Zend_Service_Amazon_Sqs extends Zend_Service_Amazon_Abstract
     /**
      * The API version to use
      */
-    protected $_sqsAPIVersion = '2009-02-01';
+    protected $_sqsApiVersion = '2009-02-01';
 
     /**
      * Signature Version
@@ -486,7 +486,7 @@ class Zend_Service_Amazon_Sqs extends Zend_Service_Amazon_Abstract
         $parameters['AWSAccessKeyId']   = $this->_getAccessKey();
         $parameters['SignatureVersion'] = $this->_sqsSignatureVersion;
         $parameters['Timestamp']        = gmdate('Y-m-d\TH:i:s\Z', time()+10);
-        $parameters['Version']          = $this->_sqsAPIVersion;
+        $parameters['Version']          = $this->_sqsApiVersion;
         $parameters['SignatureMethod']  = $this->_sqsSignatureMethod;
         $parameters['Signature']        = $this->_signParameters($queue_url, $parameters);
 

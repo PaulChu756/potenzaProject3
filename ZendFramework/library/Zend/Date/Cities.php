@@ -22,7 +22,7 @@
 /**
  * Additional data for sunset/sunrise calculations
  *
- * Holds the geographical data for all cAPItal cities and many others worldwide
+ * Holds the geographical data for all capital cities and many others worldwide
  * Original data from http://www.fallingrain.com/world/
  *
  * @category   Zend
@@ -55,7 +55,7 @@ class Zend_Date_Cities
         'Andorra la Vella' => array('latitude' => 42.5,    'longitude' =>    1.5166667),
         'Ankara'      => array('latitude' =>   39.9272222, 'longitude' =>   32.8644444),
         'Antananarivo' => array('latitude' => -18.9166667, 'longitude' =>   47.5166667),
-        'APIa'        => array('latitude' =>  -13.8333333, 'longitude' => -171.7333333),
+        'Apia'        => array('latitude' =>  -13.8333333, 'longitude' => -171.7333333),
         'Ashgabat'    => array('latitude' =>   37.95,      'longitude' =>   58.3833333),
         'Asmara'      => array('latitude' =>   15.3333333, 'longitude' =>   38.9333333),
         'Astana'      => array('latitude' =>   51.1811111, 'longitude' =>   71.4277778),

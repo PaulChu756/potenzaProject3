@@ -220,7 +220,7 @@ For terms of use, see http://www.unicode.org/copyright.html
 			<territory type="PH">Filipino</territory>
 			<territory type="PK">Pakistani</territory>
 			<territory type="PL">Polandi</territory>
-			<territory type="PM">SantAPIeri na Mikeloni</territory>
+			<territory type="PM">Santapieri na Mikeloni</territory>
 			<territory type="PN">Pitkairni</territory>
 			<territory type="PR">Pwetoriko</territory>
 			<territory type="PS">Ukingo wa Magharibi na Ukanda wa Gaza wa Palestina</territory>
@@ -369,7 +369,7 @@ For terms of use, see http://www.unicode.org/copyright.html
 							<month type="1">Chanuari</month>
 							<month type="2">Feburari</month>
 							<month type="3">Machi</month>
-							<month type="4">APIriri</month>
+							<month type="4">Apiriri</month>
 							<month type="5">Mei</month>
 							<month type="6">Juni</month>
 							<month type="7">Chulai</month>
@@ -409,7 +409,7 @@ For terms of use, see http://www.unicode.org/copyright.html
 							<day type="sat">Est</day>
 						</dayWidth>
 						<dayWidth type="wide">
-							<day type="sun">ChumAPIri</day>
+							<day type="sun">Chumapiri</day>
 							<day type="mon">Chumatato</day>
 							<day type="tue">Chumaine</day>
 							<day type="wed">Chumatano</day>

@@ -105,7 +105,7 @@ For terms of use, see http://www.unicode.org/copyright.html
 			<territory type="CO">Kolombi</territory>
 			<territory type="CR">Kɔsitarika</territory>
 			<territory type="CU">Kuba</territory>
-			<territory type="CV">CAPIvɛrdi</territory>
+			<territory type="CV">Capivɛrdi</territory>
 			<territory type="CY">Cipri</territory>
 			<territory type="CZ">Ceki republiki</territory>
 			<territory type="DE">Alimaɲi</territory>
@@ -606,7 +606,7 @@ For terms of use, see http://www.unicode.org/copyright.html
 				<displayName>siniwa Yuwan</displayName>
 			</currency>
 			<currency type="CVE">
-				<displayName>cAPIvɛrdi Esekudo</displayName>
+				<displayName>capivɛrdi Esekudo</displayName>
 			</currency>
 			<currency type="DJF">
 				<displayName>jibuti Fraŋ</displayName>

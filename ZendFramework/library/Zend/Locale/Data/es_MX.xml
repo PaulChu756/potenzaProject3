@@ -2494,8 +2494,8 @@ For terms of use, see http://www.unicode.org/copyright.html
 			<zone type="Pacific/Wallis">
 				<exemplarCity draft="contributed">Wallis</exemplarCity>
 			</zone>
-			<zone type="Pacific/APIa">
-				<exemplarCity draft="contributed">APIa</exemplarCity>
+			<zone type="Pacific/Apia">
+				<exemplarCity draft="contributed">Apia</exemplarCity>
 			</zone>
 			<zone type="Asia/Aden">
 				<exemplarCity draft="contributed">Adén</exemplarCity>

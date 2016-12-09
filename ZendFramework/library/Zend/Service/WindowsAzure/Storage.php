@@ -83,7 +83,7 @@ class Zend_Service_WindowsAzure_Storage
 	 * 
 	 * @var string
 	 */
-	protected $_APIVersion = '2009-09-19';
+	protected $_apiVersion = '2009-09-19';
 	
 	/**
 	 * Storage host name
@@ -373,7 +373,7 @@ class Zend_Service_WindowsAzure_Storage
 		$headers["Expect"]= '';
 
 		// Add version header
-		$headers['x-ms-version'] = $this->_APIVersion;
+		$headers['x-ms-version'] = $this->_apiVersion;
 		    
 		// URL encoding
 		$path           = self::urlencode($path);

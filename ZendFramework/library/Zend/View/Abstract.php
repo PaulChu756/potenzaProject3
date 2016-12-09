@@ -102,14 +102,14 @@ abstract class Zend_View_Abstract implements Zend_View_Interface
     private $_filterLoadedDir = array();
 
     /**
-     * Callback for escAPIng.
+     * Callback for escaping.
      *
      * @var string
      */
     private $_escape = 'htmlspecialchars';
 
     /**
-     * Encoding to use in escAPIng mechanisms; defaults to utf-8
+     * Encoding to use in escaping mechanisms; defaults to utf-8
      * @var string
      */
     private $_encoding = 'UTF-8';
@@ -152,7 +152,7 @@ abstract class Zend_View_Abstract implements Zend_View_Interface
         // $this->setHelperPath(null);
         $this->setFilterPath(null);
 
-        // user-defined escAPIng callback
+        // user-defined escaping callback
         if (array_key_exists('escape', $config)) {
             $this->setEscape($config['escape']);
         }
@@ -893,7 +893,7 @@ abstract class Zend_View_Abstract implements Zend_View_Interface
     /**
      * Escapes a value for output in a view script.
      *
-     * If escAPIng mechanism is one of htmlspecialchars or htmlentities, uses
+     * If escaping mechanism is one of htmlspecialchars or htmlentities, uses
      * {@link $_encoding} setting.
      *
      * @param mixed $var The output to escape.

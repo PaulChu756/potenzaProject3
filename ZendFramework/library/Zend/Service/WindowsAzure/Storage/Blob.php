@@ -143,7 +143,7 @@ class Zend_Service_WindowsAzure_Storage_Blob extends Zend_Service_WindowsAzure_S
 		parent::__construct($host, $accountName, $accountKey, $usePathStyleUri, $retryPolicy);
 
 		// API version
-		$this->_APIVersion = '2009-09-19';
+		$this->_apiVersion = '2009-09-19';
 
 		// SharedAccessSignature credentials
 		$this->_sharedAccessSignatureCredentials = new Zend_Service_WindowsAzure_Credentials_SharedAccessSignature($accountName, $accountKey, $usePathStyleUri);

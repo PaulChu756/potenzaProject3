@@ -520,7 +520,7 @@ abstract class Zend_Pdf_FileParser_Font_OpenType extends Zend_Pdf_FileParser_Fon
                 $this->isAdobeLatinSubset = false;
                 $this->vendorID = '';
                 $this->xHeight = 0;
-                $this->cAPItalHeight = 0;
+                $this->capitalHeight = 0;
                 return;
             } else {
                 /* Something else went wrong. Throw this exception higher up the chain.
@@ -705,12 +705,12 @@ abstract class Zend_Pdf_FileParser_Font_OpenType extends Zend_Pdf_FileParser_Fon
          */
         $this->skipBytes(4);
 
-        /* Versions 0 and 1 tables do not contain the x or cAPItal height
+        /* Versions 0 and 1 tables do not contain the x or capital height
          * fields. Record zero for unknown.
          */
         if ($tableVersion < 2) {
             $this->xHeight = 0;
-            $this->cAPItalHeight = 0;
+            $this->capitalHeight = 0;
         } else {
 
             /* Skip over the Windows code page coverages. We are only concerned
@@ -719,13 +719,13 @@ abstract class Zend_Pdf_FileParser_Font_OpenType extends Zend_Pdf_FileParser_Fon
             $this->skipBytes(8);
 
             $this->xHeight = $this->readInt(2);
-            $this->cAPItalHeight = $this->readInt(2);
+            $this->capitalHeight = $this->readInt(2);
 
             /* Ignore the remaining fields in this table. They are Windows-specific.
              */
         }
         /**
-         * @todo Obtain the x and cAPItal heights from the 'glyf' table if they
+         * @todo Obtain the x and capital heights from the 'glyf' table if they
          *   haven't been supplied here instead of storing zero.
          */
     }

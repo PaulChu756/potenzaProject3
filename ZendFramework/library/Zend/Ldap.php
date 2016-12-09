@@ -167,7 +167,7 @@ class Zend_Ldap
                  * @see Zend_Ldap_Exception
                  */
                 require_once 'Zend/Ldap/Exception.php';
-                /* For some reason draft-ietf-ldapext-ldap-c-API-xx.txt error
+                /* For some reason draft-ietf-ldapext-ldap-c-api-xx.txt error
                  * codes in OpenLDAP are negative values from -1 to -17.
                  */
                 $err = Zend_Ldap_Exception::LDAP_SERVER_DOWN + (-$err - 1);

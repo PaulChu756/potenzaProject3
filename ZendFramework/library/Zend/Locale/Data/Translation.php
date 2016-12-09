@@ -118,7 +118,7 @@ class Zend_Locale_Data_Translation
         'Norwegian Nynorsk' => 'nn',
         'Oriya'             => 'or',
         'Oromo'             => 'om',
-        'PAPIamentu'        => 'pap',
+        'Papiamentu'        => 'pap',
         'Pashto'            => 'ps',
         'Polish'            => 'pl',
         'Portuguese'        => 'pt',

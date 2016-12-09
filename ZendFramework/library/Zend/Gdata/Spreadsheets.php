@@ -84,7 +84,7 @@ require_once('Zend/Gdata/Spreadsheets/CellQuery.php');
 /**
  * Gdata Spreadsheets
  *
- * @link http://code.google.com/APIs/gdata/spreadsheets.html
+ * @link http://code.google.com/apis/gdata/spreadsheets.html
  *
  * @category     Zend
  * @package      Zend_Gdata
@@ -393,7 +393,7 @@ class Zend_Gdata_Spreadsheets extends Zend_Gdata
      * the array is an associative array with a 'value' and a 'function'.
      * Only non-empty cells are returned by default.  'range' is the
      * value of the 'range' query parameter specified at:
-     * http://code.google.com/APIs/spreadsheets/reference.html#cells_Parameters
+     * http://code.google.com/apis/spreadsheets/reference.html#cells_Parameters
      *
      * @param mixed $location A CellQuery, WorksheetEntry or a URL (w/o query string) specifying the feed location.
      * @param string $range The range of cells to retrieve

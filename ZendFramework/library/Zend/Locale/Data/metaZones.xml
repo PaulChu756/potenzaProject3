@@ -1373,7 +1373,7 @@ For terms of use, see http://www.unicode.org/copyright.html
 			<timezone type="MST7MDT">
 				<usesMetazone mzone="America_Mountain"/>
 			</timezone>
-			<timezone type="Pacific/APIa">
+			<timezone type="Pacific/Apia">
 				<usesMetazone to="1983-10-30 12:00" mzone="Bering"/>
 				<usesMetazone from="1983-10-30 12:00" mzone="Samoa"/>
 			</timezone>
@@ -1795,7 +1795,7 @@ For terms of use, see http://www.unicode.org/copyright.html
 			<mapZone other="Sakhalin" territory="001" type="Asia/Sakhalin"/>
 			<mapZone other="Samara" territory="001" type="Europe/Samara"/>
 			<mapZone other="Samarkand" territory="001" type="Asia/Samarkand"/>
-			<mapZone other="Samoa" territory="001" type="Pacific/APIa"/>
+			<mapZone other="Samoa" territory="001" type="Pacific/Apia"/>
 			<mapZone other="Seychelles" territory="001" type="Indian/Mahe"/>
 			<mapZone other="Shevchenko" territory="001" type="Asia/Aqtau"/>
 			<mapZone other="Singapore" territory="001" type="Asia/Singapore"/>

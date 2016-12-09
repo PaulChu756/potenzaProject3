@@ -135,7 +135,7 @@ class Zend_Pdf_Element_String extends Zend_Pdf_Element
                     default:
                         // This code is never executed extually
                         //
-                        // Don't use non-ASCII characters escAPIng
+                        // Don't use non-ASCII characters escaping
                         // if ($nextCode >= 32 && $nextCode <= 126 ) {
                         //     // Visible ASCII symbol
                         //     $chunkEntries[] = chr($nextCode);

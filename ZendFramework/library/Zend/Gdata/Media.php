@@ -28,7 +28,7 @@ require_once 'Zend/Gdata.php';
 
 /**
  * Service class for interacting with the services which use the media extensions
- * @link http://code.google.com/APIs/gdata/calendar.html
+ * @link http://code.google.com/apis/gdata/calendar.html
  *
  * @category   Zend
  * @package    Zend_Gdata

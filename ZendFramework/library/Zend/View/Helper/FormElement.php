@@ -157,7 +157,7 @@ abstract class Zend_View_Helper_FormElement extends Zend_View_Helper_HtmlElement
             $info['name'] = $attribs['name'];
         }
 
-        // Determine escAPIng from attributes
+        // Determine escaping from attributes
         if (array_key_exists('escape', $attribs)) {
             $info['escape'] = (bool)$attribs['escape'];
         }

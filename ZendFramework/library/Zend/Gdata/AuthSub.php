@@ -35,7 +35,7 @@ require_once 'Zend/Version.php';
  * Wrapper around Zend_Http_Client to facilitate Google's "Account Authentication
  * Proxy for Web-Based Applications".
  *
- * @see http://code.google.com/APIs/accounts/AuthForWebApps.html
+ * @see http://code.google.com/apis/accounts/AuthForWebApps.html
  *
  * @category   Zend
  * @package    Zend_Gdata

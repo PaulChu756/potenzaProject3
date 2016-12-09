@@ -191,7 +191,7 @@ class Zend_Cache_Backend_ZendPlatform extends Zend_Cache_Backend implements Zend
                 if (!$cache_dir) {
                     return false;
                 }
-                $cache_dir .= '/.php_cache_API/';
+                $cache_dir .= '/.php_cache_api/';
                 return $this->_clean($cache_dir, $mode);
                 break;
             case Zend_Cache::CLEANING_MODE_MATCHING_TAG:

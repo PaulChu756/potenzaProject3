@@ -34,7 +34,7 @@ require_once 'Zend/Gdata/Feed.php';
 /**
  * Represents a Google Health user's Profile List Feed
  *
- * @link http://code.google.com/APIs/health/
+ * @link http://code.google.com/apis/health/
  *
  * @category   Zend
  * @package    Zend_Gdata

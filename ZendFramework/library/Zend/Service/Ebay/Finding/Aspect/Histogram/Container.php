@@ -38,7 +38,7 @@ class Zend_Service_Ebay_Finding_Aspect_Histogram_Container extends Zend_Service_
     /**
      * A characteristic of an item in a domain.
      *
-     * For example, "Optical Zoom", "Brand", and "MegAPIxels" could be aspects
+     * For example, "Optical Zoom", "Brand", and "Megapixels" could be aspects
      * of the Digital Cameras domain. Aspects are well-known, standardized
      * characteristics of a domain, and they vary from domain to domain (the
      * aspects of "Men's Shoes" are different from those of "Digital Cameras").

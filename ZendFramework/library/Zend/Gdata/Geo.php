@@ -31,7 +31,7 @@ require_once 'Zend/Gdata.php';
  * GeoRSS + GML extensions.
  * @link http://georss.org/
  * @link http://www.opengis.net/gml/
- * @link http://code.google.com/APIs/picasaweb/reference.html#georss_reference
+ * @link http://code.google.com/apis/picasaweb/reference.html#georss_reference
  *
  * @category   Zend
  * @package    Zend_Gdata

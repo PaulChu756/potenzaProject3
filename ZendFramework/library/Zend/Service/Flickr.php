@@ -43,7 +43,7 @@ class Zend_Service_Flickr
      *
      * @var string
      */
-    public $APIKey;
+    public $apiKey;
 
     /**
      * Reference to REST client object
@@ -59,12 +59,12 @@ class Zend_Service_Flickr
      *  # Sets up character encoding
      *  # Saves the API key
      *
-     * @param  string $APIKey Your Flickr API key
+     * @param  string $apiKey Your Flickr API key
      * @return void
      */
-    public function __construct($APIKey)
+    public function __construct($apiKey)
     {
-        $this->APIKey = (string) $APIKey;
+        $this->apiKey = (string) $apiKey;
     }
 
 
@@ -258,7 +258,7 @@ class Zend_Service_Flickr
     {
         static $method = 'flickr.people.findByUsername';
 
-        $options = array('API_key' => $this->APIKey, 'method' => $method, 'username' => (string) $username);
+        $options = array('api_key' => $this->apiKey, 'method' => $method, 'username' => (string) $username);
 
         if (empty($username)) {
             /**
@@ -310,7 +310,7 @@ class Zend_Service_Flickr
             throw new Zend_Service_Exception('You must supply an e-mail address');
         }
 
-        $options = array('API_key' => $this->APIKey, 'method' => $method, 'find_email' => (string) $email);
+        $options = array('api_key' => $this->apiKey, 'method' => $method, 'find_email' => (string) $email);
 
         $restClient = $this->getRestClient();
         $restClient->getHttpClient()->resetParameters();
@@ -352,7 +352,7 @@ class Zend_Service_Flickr
             throw new Zend_Service_Exception('You must supply a photo ID');
         }
 
-        $options = array('API_key' => $this->APIKey, 'method' => $method, 'photo_id' => $id);
+        $options = array('api_key' => $this->apiKey, 'method' => $method, 'photo_id' => $id);
 
         $restClient = $this->getRestClient();
         $restClient->getHttpClient()->resetParameters();
@@ -404,7 +404,7 @@ class Zend_Service_Flickr
      */
     protected function _validateUserSearch(array $options)
     {
-        $validOptions = array('API_key', 'method', 'user_id', 'per_page', 'page', 'extras', 'min_upload_date',
+        $validOptions = array('api_key', 'method', 'user_id', 'per_page', 'page', 'extras', 'min_upload_date',
                               'min_taken_date', 'max_upload_date', 'max_taken_date', 'safe_search');
 
         $this->_compareOptions($options, $validOptions);
@@ -458,7 +458,7 @@ class Zend_Service_Flickr
      */
     protected function _validateTagSearch(array $options)
     {
-        $validOptions = array('method', 'API_key', 'user_id', 'tags', 'tag_mode', 'text', 'min_upload_date',
+        $validOptions = array('method', 'api_key', 'user_id', 'tags', 'tag_mode', 'text', 'min_upload_date',
                               'max_upload_date', 'min_taken_date', 'max_taken_date', 'license', 'sort',
                               'privacy_filter', 'bbox', 'accuracy', 'safe_search', 'content_type', 'machine_tags',
                               'machine_tag_mode', 'group_id', 'contacts', 'woe_id', 'place_id', 'media', 'has_geo',
@@ -517,7 +517,7 @@ class Zend_Service_Flickr
     */
     protected function _validateGroupPoolGetPhotos(array $options)
     {
-        $validOptions = array('API_key', 'tags', 'method', 'group_id', 'per_page', 'page', 'extras', 'user_id');
+        $validOptions = array('api_key', 'tags', 'method', 'group_id', 'per_page', 'page', 'extras', 'user_id');
 
         $this->_compareOptions($options, $validOptions);
 
@@ -595,7 +595,7 @@ class Zend_Service_Flickr
     protected function _prepareOptions($method, array $options, array $defaultOptions)
     {
         $options['method']  = (string) $method;
-        $options['API_key'] = $this->APIKey;
+        $options['api_key'] = $this->apiKey;
 
         return array_merge($defaultOptions, $options);
     }

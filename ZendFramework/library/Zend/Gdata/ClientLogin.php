@@ -34,7 +34,7 @@ require_once 'Zend/Version.php';
 /**
  * Class to facilitate Google's "Account Authentication
  * for Installed Applications" also known as "ClientLogin".
- * @see http://code.google.com/APIs/accounts/AuthForInstalledApps.html
+ * @see http://code.google.com/apis/accounts/AuthForInstalledApps.html
  *
  * @category   Zend
  * @package    Zend_Gdata
@@ -72,13 +72,13 @@ class Zend_Gdata_ClientLogin
      * @param string $loginCaptcha The user's response to the CAPTCHA challenge.
      * @param string $accountType An optional string to identify whether the
      * account to be authenticated is a google or a hosted account. Defaults to
-     * 'HOSTED_OR_GOOGLE'. See: http://code.google.com/APIs/accounts/docs/AuthForInstalledApps.html#Request
+     * 'HOSTED_OR_GOOGLE'. See: http://code.google.com/apis/accounts/docs/AuthForInstalledApps.html#Request
      * @throws Zend_Gdata_App_AuthException
      * @throws Zend_Gdata_App_HttpException
      * @throws Zend_Gdata_App_CaptchaRequiredException
      * @return Zend_Gdata_HttpClient
      */
-    public static function getHttpClient($email, $password, $service = 'xAPI',
+    public static function getHttpClient($email, $password, $service = 'xapi',
         $client = null,
         $source = self::DEFAULT_SOURCE,
         $loginToken = null,

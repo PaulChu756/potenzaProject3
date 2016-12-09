@@ -45,7 +45,7 @@ class Zend_Service_Amazon_Ec2_CloudWatch extends Zend_Service_Amazon_Ec2_Abstrac
     /**
      * The API version to use
      */
-    protected $_ec2APIVersion = '2009-05-15';
+    protected $_ec2ApiVersion = '2009-05-15';
 
     /**
      * XML Namespace for the CloudWatch Stuff

@@ -73,11 +73,11 @@ class Zend_Service_SlideShare
     /**
      * Slide share Web service communication URIs
      */
-    const SERVICE_UPLOAD_URI            = 'https://www.slideshare.net/API/2/upload_slideshow';
-    const SERVICE_GET_SHOW_URI          = 'https://www.slideshare.net/API/2/get_slideshow';
-    const SERVICE_GET_SHOW_BY_USER_URI  = 'https://www.slideshare.net/API/2/get_slideshows_by_user';
-    const SERVICE_GET_SHOW_BY_TAG_URI   = 'https://www.slideshare.net/API/2/get_slideshows_by_tag';
-    const SERVICE_GET_SHOW_BY_GROUP_URI = 'https://www.slideshare.net/API/2/get_slideshows_by_group';
+    const SERVICE_UPLOAD_URI            = 'https://www.slideshare.net/api/2/upload_slideshow';
+    const SERVICE_GET_SHOW_URI          = 'https://www.slideshare.net/api/2/get_slideshow';
+    const SERVICE_GET_SHOW_BY_USER_URI  = 'https://www.slideshare.net/api/2/get_slideshows_by_user';
+    const SERVICE_GET_SHOW_BY_TAG_URI   = 'https://www.slideshare.net/api/2/get_slideshows_by_tag';
+    const SERVICE_GET_SHOW_BY_GROUP_URI = 'https://www.slideshare.net/api/2/get_slideshows_by_group';
 
     /**
      * The MIME type of Slideshow files
@@ -90,7 +90,7 @@ class Zend_Service_SlideShare
      *
      * @var string The API key
      */
-    protected $_APIKey;
+    protected $_apiKey;
 
     /**
      * The shared secret to use in requests
@@ -254,9 +254,9 @@ class Zend_Service_SlideShare
      *
      * @return string the API Key
      */
-    public function getAPIKey()
+    public function getApiKey()
     {
-        return $this->_APIKey;
+        return $this->_apiKey;
     }
 
     /**
@@ -265,9 +265,9 @@ class Zend_Service_SlideShare
      * @param string $key The API key to use
      * @return Zend_Service_SlideShare
      */
-    public function setAPIKey($key)
+    public function setApiKey($key)
     {
-        $this->_APIKey = (string)$key;
+        $this->_apiKey = (string)$key;
         return $this;
     }
 
@@ -296,16 +296,16 @@ class Zend_Service_SlideShare
     /**
      * The Constructor
      *
-     * @param string $APIkey       The API key
+     * @param string $apikey       The API key
      * @param string $sharedSecret The shared secret
      * @param string $username     The username
      * @param string $password     The password
      */
     public function __construct(
-        $APIkey, $sharedSecret, $username = null, $password = null
+        $apikey, $sharedSecret, $username = null, $password = null
     )
     {
-        $this->setAPIKey($APIkey)
+        $this->setApiKey($apikey)
             ->setSharedSecret($sharedSecret)
             ->setUserName($username)
             ->setPassword($password);
@@ -334,7 +334,7 @@ class Zend_Service_SlideShare
         $timestamp = time();
 
         $params = array(
-            'API_key'         => $this->getAPIKey(),
+            'api_key'         => $this->getApiKey(),
             'ts'              => $timestamp,
             'hash'            => sha1($this->getSharedSecret() . $timestamp),
             'username'        => $this->getUserName(),
@@ -421,7 +421,7 @@ class Zend_Service_SlideShare
         $timestamp = time();
 
         $params = array(
-            'API_key'      => $this->getAPIKey(),
+            'api_key'      => $this->getApiKey(),
             'ts'           => $timestamp,
             'hash'         => sha1($this->getSharedSecret() . $timestamp),
             'slideshow_id' => $ssId
@@ -565,7 +565,7 @@ class Zend_Service_SlideShare
         $timestamp = time();
 
         $params = array(
-            'API_key' => $this->getAPIKey(),
+            'api_key' => $this->getApiKey(),
             'ts'      => $timestamp,
             'hash'    => sha1($this->getSharedSecret() . $timestamp),
             $key      => $value

@@ -146,7 +146,7 @@ For terms of use, see http://www.unicode.org/copyright.html
 			<territory type="PH">Ufilipino</territory>
 			<territory type="PK">Upakistani</territory>
 			<territory type="PL">Upolandi</territory>
-			<territory type="PM">UsantAPIeri na Mikeloni</territory>
+			<territory type="PM">Usantapieri na Mikeloni</territory>
 			<territory type="PN">Upitkairni</territory>
 			<territory type="PR">Upwetoriko</territory>
 			<territory type="PY">Paragwai</territory>
@@ -346,7 +346,7 @@ For terms of use, see http://www.unicode.org/copyright.html
 				</dayPeriods>
 				<eras>
 					<eraNames>
-						<era type="0">HinAPIya yesu</era>
+						<era type="0">Hinapiya yesu</era>
 						<era type="1">Yopia yesu</era>
 					</eraNames>
 					<eraAbbr>

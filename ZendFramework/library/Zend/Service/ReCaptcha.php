@@ -45,21 +45,21 @@ class Zend_Service_ReCaptcha extends Zend_Service_Abstract
      *
      * @var string
      */
-    const API_SERVER = 'http://www.google.com/recaptcha/API';
+    const API_SERVER = 'http://www.google.com/recaptcha/api';
 
     /**
      * URI to the secure API
      *
      * @var string
      */
-    const API_SECURE_SERVER = 'https://www.google.com/recaptcha/API';
+    const API_SECURE_SERVER = 'https://www.google.com/recaptcha/api';
 
     /**
      * URI to the verify server
      *
      * @var string
      */
-    const VERIFY_SERVER = 'http://www.google.com/recaptcha/API/verify';
+    const VERIFY_SERVER = 'http://www.google.com/recaptcha/api/verify';
 
     /**
      * Public key used when displaying the captcha
@@ -98,7 +98,7 @@ class Zend_Service_ReCaptcha extends Zend_Service_Abstract
     /**
      * Options for tailoring reCaptcha
      *
-     * See the different options on http://recaptcha.net/APIdocs/captcha/client.html
+     * See the different options on http://recaptcha.net/apidocs/captcha/client.html
      *
      * @var array
      */

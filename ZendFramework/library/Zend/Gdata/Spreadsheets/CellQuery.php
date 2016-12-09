@@ -34,7 +34,7 @@ require_once('Zend/Gdata/Query.php');
 /**
  * Assists in constructing queries for Google Spreadsheets cells
  *
- * @link http://code.google.com/APIs/gdata/spreadsheets/
+ * @link http://code.google.com/apis/gdata/spreadsheets/
  *
  * @category   Zend
  * @package    Zend_Gdata

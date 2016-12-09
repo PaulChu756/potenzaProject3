@@ -30,21 +30,21 @@ abstract class Zend_Service_Amazon_Authentication
 {
     protected $_accessKey;
     protected $_secretKey;
-    protected $_APIVersion;
+    protected $_apiVersion;
 
     /**
      * Constructor
      *
      * @param  string $accessKey
      * @param  string $secretKey
-     * @param  string $APIVersion
+     * @param  string $apiVersion
      * @return void
      */
-    public function __construct($accessKey, $secretKey, $APIVersion)
+    public function __construct($accessKey, $secretKey, $apiVersion)
     {
         $this->setAccessKey($accessKey);
         $this->setSecretKey($secretKey);
-        $this->setAPIVersion($APIVersion);
+        $this->setApiVersion($apiVersion);
     }
 
     /**
@@ -72,11 +72,11 @@ abstract class Zend_Service_Amazon_Authentication
     /**
      * Set API version
      *
-     * @param  string $APIVersion
+     * @param  string $apiVersion
      * @return void
      */
-    public function setAPIVersion($APIVersion)
+    public function setApiVersion($apiVersion)
     {
-        $this->_APIVersion = $APIVersion;
+        $this->_apiVersion = $apiVersion;
     }
 }

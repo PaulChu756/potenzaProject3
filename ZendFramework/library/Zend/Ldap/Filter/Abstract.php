@@ -119,9 +119,9 @@ abstract class Zend_Ldap_Filter_Abstract
 
         if (!is_array($values)) $values = array($values);
         foreach ($values as $key => $val) {
-            // EscAPIng of filter meta characters
+            // Escaping of filter meta characters
             $val = str_replace(array('\\', '*', '(', ')'), array('\5c', '\2a', '\28', '\29'), $val);
-            // ASCII < 32 escAPIng
+            // ASCII < 32 escaping
             $val = Zend_Ldap_Converter::ascToHex32($val);
             if (null === $val) $val = '\0';  // apply escaped "null" if string is empty
             $values[$key] = $val;

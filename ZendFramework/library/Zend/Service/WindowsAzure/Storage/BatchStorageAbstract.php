@@ -109,7 +109,7 @@ abstract class Zend_Service_WindowsAzure_Storage_BatchStorageAbstract
 	    $headers = array();
 	    
 		// Add version header
-		$headers['x-ms-version'] = $this->_APIVersion;
+		$headers['x-ms-version'] = $this->_apiVersion;
 		
 		// Add dataservice headers
 		$headers['DataServiceVersion'] = '1.0;NetFx';

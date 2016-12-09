@@ -376,7 +376,7 @@ For terms of use, see http://www.unicode.org/copyright.html
 			<language type="pag">pangasinã</language>
 			<language type="pal">pálavi</language>
 			<language type="pam">pampanga</language>
-			<language type="pap">pAPIamento</language>
+			<language type="pap">papiamento</language>
 			<language type="pau">palauano</language>
 			<language type="peo">persa arcaico</language>
 			<language type="phn">fenício</language>
@@ -2940,7 +2940,7 @@ For terms of use, see http://www.unicode.org/copyright.html
 			<zone type="Pacific/Efate">
 				<exemplarCity>Éfaté</exemplarCity>
 			</zone>
-			<zone type="Pacific/APIa">
+			<zone type="Pacific/Apia">
 				<exemplarCity>Ápia</exemplarCity>
 			</zone>
 			<zone type="Asia/Aden">

@@ -30,7 +30,7 @@ require_once 'Zend/Service/ReCaptcha.php';
  *
  * Allows to insert captchas driven by ReCaptcha service
  *
- * @see http://recaptcha.net/APIdocs/captcha/
+ * @see http://recaptcha.net/apidocs/captcha/
  *
  * @category   Zend
  * @package    Zend_Captcha

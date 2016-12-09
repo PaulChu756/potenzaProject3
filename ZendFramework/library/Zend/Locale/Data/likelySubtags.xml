@@ -726,7 +726,7 @@ For terms of use, see http://www.unicode.org/copyright.html
 		<likelySubtag from="nr" to="nr_Latn_ZA"/>
 		<!--{ South Ndebele; ?; ? } => { South Ndebele; Latin; South Africa }-->
 		<likelySubtag from="nsk" to="nsk_Cans_CA"/>
-		<!--{ NaskAPI; ?; ? } => { NaskAPI; Unified Canadian Aboriginal Syllabics; Canada }-->
+		<!--{ Naskapi; ?; ? } => { Naskapi; Unified Canadian Aboriginal Syllabics; Canada }-->
 		<likelySubtag from="nso" to="nso_Latn_ZA"/>
 		<!--{ Northern Sotho; ?; ? } => { Northern Sotho; Latin; South Africa }-->
 		<likelySubtag from="nus" to="nus_Latn_SD"/>
@@ -760,7 +760,7 @@ For terms of use, see http://www.unicode.org/copyright.html
 		<likelySubtag from="pam" to="pam_Latn_PH"/>
 		<!--{ Pampanga; ?; ? } => { Pampanga; Latin; Philippines }-->
 		<likelySubtag from="pap" to="pap_Latn_AW"/>
-		<!--{ PAPIamento; ?; ? } => { PAPIamento; Latin; Aruba }-->
+		<!--{ Papiamento; ?; ? } => { Papiamento; Latin; Aruba }-->
 		<likelySubtag from="pau" to="pau_Latn_PW"/>
 		<!--{ Palauan; ?; ? } => { Palauan; Latin; Palau }-->
 		<likelySubtag from="pcm" to="pcm_Latn_NG"/>
@@ -1258,7 +1258,7 @@ For terms of use, see http://www.unicode.org/copyright.html
 		<likelySubtag from="und_BO" to="es_Latn_BO"/>
 		<!--{ ?; ?; Bolivia } => { Spanish; Latin; Bolivia }-->
 		<likelySubtag from="und_BQ" to="pap_Latn_BQ"/>
-		<!--{ ?; ?; Caribbean Netherlands } => { PAPIamento; Latin; Caribbean Netherlands }-->
+		<!--{ ?; ?; Caribbean Netherlands } => { Papiamento; Latin; Caribbean Netherlands }-->
 		<likelySubtag from="und_BR" to="pt_Latn_BR"/>
 		<!--{ ?; ?; Brazil } => { Portuguese; Latin; Brazil }-->
 		<likelySubtag from="und_BT" to="dz_Tibt_BT"/>
@@ -1294,7 +1294,7 @@ For terms of use, see http://www.unicode.org/copyright.html
 		<likelySubtag from="und_CV" to="pt_Latn_CV"/>
 		<!--{ ?; ?; Cape Verde } => { Portuguese; Latin; Cape Verde }-->
 		<likelySubtag from="und_CW" to="pap_Latn_CW"/>
-		<!--{ ?; ?; Curaçao } => { PAPIamento; Latin; Curaçao }-->
+		<!--{ ?; ?; Curaçao } => { Papiamento; Latin; Curaçao }-->
 		<likelySubtag from="und_CY" to="el_Grek_CY"/>
 		<!--{ ?; ?; Cyprus } => { Greek; Greek; Cyprus }-->
 		<likelySubtag from="und_CZ" to="cs_Latn_CZ"/>

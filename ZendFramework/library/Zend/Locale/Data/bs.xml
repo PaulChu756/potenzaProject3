@@ -312,7 +312,7 @@ For terms of use, see http://www.unicode.org/copyright.html
 			<language type="pag">pangasinski</language>
 			<language type="pal">pahlavi</language>
 			<language type="pam">pampanga</language>
-			<language type="pap">pAPIamento</language>
+			<language type="pap">papiamento</language>
 			<language type="pau">palauanski</language>
 			<language type="peo">staropersijski</language>
 			<language type="phn">feničanski</language>
@@ -2192,8 +2192,8 @@ For terms of use, see http://www.unicode.org/copyright.html
 			<zone type="Pacific/Wallis">
 				<exemplarCity>Valis</exemplarCity>
 			</zone>
-			<zone type="Pacific/APIa">
-				<exemplarCity draft="provisional">APIja</exemplarCity>
+			<zone type="Pacific/Apia">
+				<exemplarCity draft="provisional">Apija</exemplarCity>
 			</zone>
 			<zone type="Indian/Mayotte">
 				<exemplarCity draft="provisional">Majote</exemplarCity>

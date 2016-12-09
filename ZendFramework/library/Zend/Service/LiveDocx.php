@@ -81,7 +81,7 @@ class Zend_Service_LiveDocx
      *     array (
      *         'username'   => 'myUsername',
      *         'password'   => 'myPassword',
-     *         'soapClient' => new Zend_Soap_Client('https://API.example.com/path/mailmerge.asmx?WSDL')
+     *         'soapClient' => new Zend_Soap_Client('https://api.example.com/path/mailmerge.asmx?WSDL')
      *     )
      * );
      * {code}
@@ -120,7 +120,7 @@ class Zend_Service_LiveDocx
      *             ->setPassword('myPassword');
      *
      * $phpLiveDocx->setSoapClient(
-     *     new Zend_Soap_Client('https://API.example.com/path/mailmerge.asmx?WSDL')
+     *     new Zend_Soap_Client('https://api.example.com/path/mailmerge.asmx?WSDL')
      * );
      * {/code}
      *

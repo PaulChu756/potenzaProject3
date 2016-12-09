@@ -61,7 +61,7 @@ class Zend_Service_Yahoo
          * @see Zend_Rest_Client
          */
         require_once 'Zend/Rest/Client.php';
-        $this->_rest = new Zend_Rest_Client('http://search.yahooAPIs.com');
+        $this->_rest = new Zend_Rest_Client('http://search.yahooapis.com');
     }
 
 
@@ -88,7 +88,7 @@ class Zend_Service_Yahoo
         $this->_validateInlinkDataSearch($options);
 
         $this->_rest->getHttpClient()->resetParameters();
-        $this->_rest->setUri('http://search.yahooAPIs.com');
+        $this->_rest->setUri('http://search.yahooapis.com');
         $response = $this->_rest->restGet('/SiteExplorerService/V1/inlinkData', $options);
 
         if ($response->isError()) {
@@ -143,7 +143,7 @@ class Zend_Service_Yahoo
         $this->_validateImageSearch($options);
 
         $this->_rest->getHttpClient()->resetParameters();
-        $this->_rest->setUri('http://search.yahooAPIs.com');
+        $this->_rest->setUri('http://search.yahooapis.com');
         $response = $this->_rest->restGet('/ImageSearchService/V1/imageSearch', $options);
 
         if ($response->isError()) {
@@ -206,7 +206,7 @@ class Zend_Service_Yahoo
         $this->_validateLocalSearch($options);
 
         $this->_rest->getHttpClient()->resetParameters();
-        $this->_rest->setUri('http://local.yahooAPIs.com');
+        $this->_rest->setUri('http://local.yahooapis.com');
         $response = $this->_rest->restGet('/LocalSearchService/V1/localSearch', $options);
 
         if ($response->isError()) {
@@ -259,7 +259,7 @@ class Zend_Service_Yahoo
         $this->_validateNewsSearch($options);
 
         $this->_rest->getHttpClient()->resetParameters();
-        $this->_rest->setUri('http://search.yahooAPIs.com');
+        $this->_rest->setUri('http://search.yahooapis.com');
         $response = $this->_rest->restGet('/NewsSearchService/V1/newsSearch', $options);
 
         if ($response->isError()) {
@@ -305,7 +305,7 @@ class Zend_Service_Yahoo
         $this->_validatePageDataSearch($options);
 
         $this->_rest->getHttpClient()->resetParameters();
-        $this->_rest->setUri('http://search.yahooAPIs.com');
+        $this->_rest->setUri('http://search.yahooapis.com');
         $response = $this->_rest->restGet('/SiteExplorerService/V1/pageData', $options);
 
         if ($response->isError()) {
@@ -358,7 +358,7 @@ class Zend_Service_Yahoo
         $this->_validateVideoSearch($options);
 
         $this->_rest->getHttpClient()->resetParameters();
-        $this->_rest->setUri('http://search.yahooAPIs.com');
+        $this->_rest->setUri('http://search.yahooapis.com');
         $response = $this->_rest->restGet('/VideoSearchService/V1/videoSearch', $options);
 
         if ($response->isError()) {
@@ -414,7 +414,7 @@ class Zend_Service_Yahoo
         $this->_validateWebSearch($options);
 
         $this->_rest->getHttpClient()->resetParameters();
-        $this->_rest->setUri('http://search.yahooAPIs.com');
+        $this->_rest->setUri('http://search.yahooapis.com');
         $response = $this->_rest->restGet('/WebSearchService/V1/webSearch', $options);
 
         if ($response->isError()) {
@@ -937,10 +937,10 @@ class Zend_Service_Yahoo
     protected static function _checkErrors(DOMDocument $dom)
     {
         $xpath = new DOMXPath($dom);
-        $xpath->registerNamespace('yAPI', 'urn:yahoo:API');
+        $xpath->registerNamespace('yapi', 'urn:yahoo:api');
 
-        if ($xpath->query('//yAPI:Error')->length >= 1) {
-            $message = $xpath->query('//yAPI:Error/yAPI:Message/text()')->item(0)->data;
+        if ($xpath->query('//yapi:Error')->length >= 1) {
+            $message = $xpath->query('//yapi:Error/yapi:Message/text()')->item(0)->data;
             /**
              * @see Zend_Service_Exception
              */

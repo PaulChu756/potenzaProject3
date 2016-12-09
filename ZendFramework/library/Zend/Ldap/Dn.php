@@ -515,7 +515,7 @@ class Zend_Ldap_Dn implements ArrayAccess
 
         if (!is_array($values)) $values = array($values);
         foreach ($values as $key => $val) {
-            // EscAPIng of filter meta characters
+            // Escaping of filter meta characters
             $val = str_replace(array('\\', ',', '+', '"', '<', '>', ';', '#', '=', ),
                 array('\\\\', '\,', '\+', '\"', '\<', '\>', '\;', '\#', '\='), $val);
             $val = Zend_Ldap_Converter::ascToHex32($val);

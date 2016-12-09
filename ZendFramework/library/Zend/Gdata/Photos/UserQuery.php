@@ -45,11 +45,11 @@ class Zend_Gdata_Photos_UserQuery extends Zend_Gdata_Query
 
     /**
      * Indicates the format of data returned in Atom feeds. Can be either
-     * 'API' or 'base'. Default value is 'API'.
+     * 'api' or 'base'. Default value is 'api'.
      *
      * @var string
      */
-    protected $_projection = 'API';
+    protected $_projection = 'api';
 
     /**
      * Indicates whether to request a feed or entry in queries. Default
@@ -78,7 +78,7 @@ class Zend_Gdata_Photos_UserQuery extends Zend_Gdata_Query
 
     /**
      * Set's the format of data returned in Atom feeds. Can be either
-     * 'API' or 'base'. Normally, 'API' will be desired. Default is 'API'.
+     * 'api' or 'base'. Normally, 'api' will be desired. Default is 'api'.
      *
      * @param string $value
      * @return Zend_Gdata_Photos_UserQuery Provides a fluent interface
@@ -188,7 +188,7 @@ class Zend_Gdata_Photos_UserQuery extends Zend_Gdata_Query
      * match this value will be returned. If null or unset, this filter will
      * not be applied.
      *
-     * See http://code.google.com/APIs/picasaweb/reference.html#Parameters
+     * See http://code.google.com/apis/picasaweb/reference.html#Parameters
      * for a list of valid values.
      *
      * @param string $value The tag to filter by, or null if no
@@ -220,7 +220,7 @@ class Zend_Gdata_Photos_UserQuery extends Zend_Gdata_Query
      * match this value will be returned. If null or unset, this filter will
      * not be applied.
      *
-     * See http://code.google.com/APIs/picasaweb/reference.html#Parameters
+     * See http://code.google.com/apis/picasaweb/reference.html#Parameters
      * for a list of valid values.
      *
      * @param string $value The kind to filter by, or null if no
@@ -252,7 +252,7 @@ class Zend_Gdata_Photos_UserQuery extends Zend_Gdata_Query
      * match this value will be returned. If null or unset, this filter will
      * not be applied.
      *
-     * See http://code.google.com/APIs/picasaweb/reference.html#Parameters
+     * See http://code.google.com/apis/picasaweb/reference.html#Parameters
      * for a list of valid values.
      *
      * @param string $value The image size to filter by, or null if no
@@ -284,7 +284,7 @@ class Zend_Gdata_Photos_UserQuery extends Zend_Gdata_Query
      * match this value will be returned. If null or unset, this filter will
      * not be applied.
      *
-     * See http://code.google.com/APIs/picasaweb/reference.html#Parameters
+     * See http://code.google.com/apis/picasaweb/reference.html#Parameters
      * for a list of valid values.
      *
      * @param string $value The thumbnail size to filter by, or null if no

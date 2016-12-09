@@ -258,7 +258,7 @@ class Zend_Http_UserAgent_Mobile extends Zend_Http_UserAgent_AbstractDevice
         'voda',
         'wap-',
         'wapa',
-        'wAPI',
+        'wapi',
         'wapp',
         'wapr',
         'webc',

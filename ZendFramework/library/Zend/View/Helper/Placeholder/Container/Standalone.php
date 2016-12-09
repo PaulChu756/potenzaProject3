@@ -93,7 +93,7 @@ abstract class Zend_View_Helper_Placeholder_Container_Standalone extends Zend_Vi
     }
 
     /**
-     * Set whether or not auto escAPIng should be used
+     * Set whether or not auto escaping should be used
      *
      * @param  bool $autoEscape whether or not to auto escape output
      * @return Zend_View_Helper_Placeholder_Container_Standalone
@@ -105,7 +105,7 @@ abstract class Zend_View_Helper_Placeholder_Container_Standalone extends Zend_Vi
     }
 
     /**
-     * Return whether autoEscAPIng is enabled or disabled
+     * Return whether autoEscaping is enabled or disabled
      *
      * return bool
      */

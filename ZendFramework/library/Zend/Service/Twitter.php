@@ -57,12 +57,12 @@ class Zend_Service_Twitter
     /**
      * Base URI for all API calls
      */
-    const API_BASE_URI = 'https://API.twitter.com/1.1/';
+    const API_BASE_URI = 'https://api.twitter.com/1.1/';
 
     /**
      * OAuth Endpoint
      */
-    const OAUTH_BASE_URI = 'https://API.twitter.com/oauth';
+    const OAUTH_BASE_URI = 'https://api.twitter.com/oauth';
 
     /**
      * 246 is the current limit for a status message, 140 characters are displayed
@@ -349,7 +349,7 @@ class Zend_Service_Twitter
     }
 
     /**
-     * Returns the number of API requests you have left per hour.
+     * Returns the number of api requests you have left per hour.
      *
      * @todo   Have a separate payload object to represent rate limits
      * @throws Zend_Http_Client_Exception if HTTP request fails or times out

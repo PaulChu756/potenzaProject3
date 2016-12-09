@@ -69,7 +69,7 @@ final class Zend_Version
         if (null === self::$_latestVersion) {
             self::$_latestVersion = 'not available';
 
-            $handle = fopen('http://framework.zend.com/API/zf-version', 'r');
+            $handle = fopen('http://framework.zend.com/api/zf-version', 'r');
             if (false !== $handle) {
                 self::$_latestVersion = stream_get_contents($handle);
                 fclose($handle);

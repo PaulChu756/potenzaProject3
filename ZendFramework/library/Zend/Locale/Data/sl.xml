@@ -320,7 +320,7 @@ For terms of use, see http://www.unicode.org/copyright.html
 			<language type="pa">pandžabščina</language>
 			<language type="pag">pangasinanščina</language>
 			<language type="pam">pampanščina</language>
-			<language type="pap">pAPIamentu</language>
+			<language type="pap">papiamentu</language>
 			<language type="pau">palavanščina</language>
 			<language type="peo">stara perzijščina</language>
 			<language type="phn">feničanščina</language>
@@ -536,7 +536,7 @@ For terms of use, see http://www.unicode.org/copyright.html
 			<script type="Osma">osmanski</script>
 			<script type="Perm">staropermijski</script>
 			<script type="Phag">pagpajski</script>
-			<script type="Phli">vrezani nAPIsi pahlavi</script>
+			<script type="Phli">vrezani napisi pahlavi</script>
 			<script type="Phlp">psalmski pahlavi</script>
 			<script type="Phlv">knjižno palavanski</script>
 			<script type="Phnx">feničanski</script>
@@ -572,9 +572,9 @@ For terms of use, see http://www.unicode.org/copyright.html
 			<script type="Zinh">podedovan</script>
 			<script type="Zmth">matematična znamenja</script>
 			<script type="Zsym">simboli</script>
-			<script type="Zxxx">nenAPIsano</script>
+			<script type="Zxxx">nenapisano</script>
 			<script type="Zyyy">splošno</script>
-			<script type="Zzzz">neznan ali neveljaven zAPIs</script>
+			<script type="Zzzz">neznan ali neveljaven zapis</script>
 		</scripts>
 		<territories>
 			<territory type="001">Svet</territory>

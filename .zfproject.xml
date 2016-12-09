@@ -18,8 +18,7 @@
           <layoutScriptFile layoutName="layout"/>
         </layoutScriptsDirectory>
       </layoutsDirectory>
-      <modelsDirectory>
-      </modelsDirectory>
+      <modelsDirectory/>
       <modulesDirectory>
         <moduleDirectory moduleName="API">
           <configsDirectory enabled="false"/>
@@ -44,9 +43,15 @@
           <modelsDirectory>
             <dbTableDirectory>
               <dbTableFile dbTableName="People"/>
+              <dbTableFile dbTableName="States"/>
+              <dbTableFile dbTableName="Visits"/>
             </dbTableDirectory>
             <modelFile modelName="PeopleMapper"/>
             <modelFile modelName="People"/>
+            <modelFile modelName="Visits"/>
+            <modelFile modelName="VisitsMapper"/>
+            <modelFile modelName="StatesMapper"/>
+            <modelFile modelName="States"/>
           </modelsDirectory>
           <servicesDirectory enabled="false"/>
           <viewsDirectory>
@@ -62,7 +67,6 @@
               </viewControllerScriptsDirectory>
               <viewControllerScriptsDirectory forControllerName="Index">
                 <viewScriptFile forActionName="index"/>
-              </viewControllerScriptsDirectory>
               </viewControllerScriptsDirectory>
             </viewScriptsDirectory>
             <viewHelpersDirectory/>

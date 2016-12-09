@@ -29,7 +29,7 @@ require_once 'Zend/Gdata/Gbase/Entry.php';
 /**
  * Concrete class for working with Item entries.
  *
- * @link http://code.google.com/APIs/base/
+ * @link http://code.google.com/apis/base/
  *
  * @category   Zend
  * @package    Zend_Gdata

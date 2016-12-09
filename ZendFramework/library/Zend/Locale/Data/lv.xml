@@ -380,7 +380,7 @@ For terms of use, see http://www.unicode.org/copyright.html
 			<language type="phn">feniķiešu</language>
 			<language type="pi">pāli</language>
 			<language type="pl">poļu</language>
-			<language type="pon">ponAPIešu</language>
+			<language type="pon">ponapiešu</language>
 			<language type="pro">senprovansiešu</language>
 			<language type="ps">puštu</language>
 			<language type="pt">portugāļu</language>
@@ -499,7 +499,7 @@ For terms of use, see http://www.unicode.org/copyright.html
 			<language type="vai">vaju</language>
 			<language type="ve">vendu</language>
 			<language type="vi">vjetnamiešu</language>
-			<language type="vo">volAPIks</language>
+			<language type="vo">volapiks</language>
 			<language type="vot">votu</language>
 			<language type="vun">vundžo</language>
 			<language type="wa">valoņu</language>
@@ -512,7 +512,7 @@ For terms of use, see http://www.unicode.org/copyright.html
 			<language type="xh">khosu</language>
 			<language type="xog">sogu</language>
 			<language type="yao">jao</language>
-			<language type="yap">jAPIešu</language>
+			<language type="yap">japiešu</language>
 			<language type="yav">janbaņu</language>
 			<language type="ybb">jembu</language>
 			<language type="yi">jidišs</language>
@@ -2995,8 +2995,8 @@ For terms of use, see http://www.unicode.org/copyright.html
 			<zone type="Pacific/Wallis">
 				<exemplarCity>Volisa</exemplarCity>
 			</zone>
-			<zone type="Pacific/APIa">
-				<exemplarCity>APIja</exemplarCity>
+			<zone type="Pacific/Apia">
+				<exemplarCity>Apija</exemplarCity>
 			</zone>
 			<zone type="Asia/Aden">
 				<exemplarCity>Adena</exemplarCity>

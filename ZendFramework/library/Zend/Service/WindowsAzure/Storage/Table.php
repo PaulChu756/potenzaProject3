@@ -99,7 +99,7 @@ class Zend_Service_WindowsAzure_Storage_Table
 	    $this->_credentials = new Zend_Service_WindowsAzure_Credentials_SharedKeyLite($accountName, $accountKey, $this->_usePathStyleUri);
 	    
 	    // API version
-		$this->_APIVersion = '2009-09-19';
+		$this->_apiVersion = '2009-09-19';
 	}
 	
 	/**

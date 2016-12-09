@@ -120,7 +120,7 @@ class Zend_Soap_Client
      *
      * @var array
      */
-    protected $_soAPInputHeaders = array();
+    protected $_soapInputHeaders = array();
 
     /**
      * Permanent SOAP request headers (shared between requests).
@@ -129,7 +129,7 @@ class Zend_Soap_Client
      *
      * @var array
      */
-    protected $_permanentSoAPInputHeaders = array();
+    protected $_permanentSoapInputHeaders = array();
 
     /**
      * Output SOAP headers.
@@ -1104,12 +1104,12 @@ class Zend_Soap_Client
      * @param boolean $permanent
      * @return Zend_Soap_Client
      */
-    public function addSoAPInputHeader(SoapHeader $header, $permanent = false)
+    public function addSoapInputHeader(SoapHeader $header, $permanent = false)
     {
         if ($permanent) {
-            $this->_permanentSoAPInputHeaders[] = $header;
+            $this->_permanentSoapInputHeaders[] = $header;
         } else {
-            $this->_soAPInputHeaders[] = $header;
+            $this->_soapInputHeaders[] = $header;
         }
 
         return $this;
@@ -1120,10 +1120,10 @@ class Zend_Soap_Client
      *
      * @return Zend_Soap_Client
      */
-    public function resetSoAPInputHeaders()
+    public function resetSoapInputHeaders()
     {
-        $this->_permanentSoAPInputHeaders = array();
-        $this->_soAPInputHeaders = array();
+        $this->_permanentSoapInputHeaders = array();
+        $this->_soapInputHeaders = array();
 
         return $this;
     }
@@ -1151,7 +1151,7 @@ class Zend_Soap_Client
 
         $this->_lastMethod = $name;
 
-        $soapHeaders = array_merge($this->_permanentSoAPInputHeaders, $this->_soAPInputHeaders);
+        $soapHeaders = array_merge($this->_permanentSoapInputHeaders, $this->_soapInputHeaders);
         $result = $soapClient->__soapCall($name,
                                                  $this->_preProcessArguments($arguments),
                                                  null, /* Options are already set to the SOAP client object */
@@ -1159,7 +1159,7 @@ class Zend_Soap_Client
                                                  $this->_soapOutputHeaders);
 
         // Reset non-permanent input headers
-        $this->_soAPInputHeaders = array();
+        $this->_soapInputHeaders = array();
 
         return $this->_preProcessResult($result);
     }

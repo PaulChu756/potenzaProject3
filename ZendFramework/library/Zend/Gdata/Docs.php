@@ -48,7 +48,7 @@ require_once 'Zend/Gdata/App/Extension/Title.php';
 
 /**
  * Service class for interacting with the Google Document List data API
- * @link http://code.google.com/APIs/documents/
+ * @link http://code.google.com/apis/documents/
  *
  * @category   Zend
  * @package    Zend_Gdata

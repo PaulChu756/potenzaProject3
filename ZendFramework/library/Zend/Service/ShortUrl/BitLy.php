@@ -40,7 +40,7 @@ class Zend_Service_ShortUrl_BitLy extends Zend_Service_ShortUrl_AbstractShortene
      *
      * @var string
      */
-    protected $_APIUri = 'http://API.bitly.com';
+    protected $_apiUri = 'http://api.bitly.com';
 
     /**
      * user login name
@@ -54,18 +54,18 @@ class Zend_Service_ShortUrl_BitLy extends Zend_Service_ShortUrl_AbstractShortene
      *
      * @var string
      */
-    protected $_APIKey;
+    protected $_apiKey;
 
     /**
      * @param string $login user login name or application access token
-     * @param null|string $APIKey user API key
+     * @param null|string $apiKey user API key
      */
-    public function __construct($login, $APIKey = null)
+    public function __construct($login, $apiKey = null)
     {
-        if(null === $APIKey) {
+        if(null === $apiKey) {
             $this->setOAuthAccessToken($login);
         } else {
-            $this->setAPILogin($login, $APIKey);
+            $this->setApiLogin($login, $apiKey);
         }
     }
 
@@ -77,7 +77,7 @@ class Zend_Service_ShortUrl_BitLy extends Zend_Service_ShortUrl_AbstractShortene
      */
     public function setOAuthAccessToken($accessToken)
     {
-        $this->_APIKey = $accessToken;
+        $this->_apiKey = $accessToken;
         $this->_loginName = null;
         return $this;
     }
@@ -86,12 +86,12 @@ class Zend_Service_ShortUrl_BitLy extends Zend_Service_ShortUrl_AbstractShortene
      * set login credentials
      *
      * @param $login
-     * @param $APIKey
+     * @param $apiKey
      * @return Zend_Service_ShortUrl_BitLy
      */
-    public function setAPILogin($login, $APIKey)
+    public function setApiLogin($login, $apiKey)
     {
-        $this->_APIKey = $APIKey;
+        $this->_apiKey = $apiKey;
         $this->_loginName = $login;
         return $this;
     }
@@ -104,11 +104,11 @@ class Zend_Service_ShortUrl_BitLy extends Zend_Service_ShortUrl_AbstractShortene
     {
         if(null === $this->_loginName) {
             //OAuth login
-            $this->getHttpClient()->setParameterGet('access_token', $this->_APIKey);
+            $this->getHttpClient()->setParameterGet('access_token', $this->_apiKey);
         } else {
             //login/APIKey authentication
             $this->getHttpClient()->setParameterGet('login',$this->_loginName);
-            $this->getHttpClient()->setParameterGet('APIKey',$this->_APIKey);
+            $this->getHttpClient()->setParameterGet('apiKey',$this->_apiKey);
         }
     }
 
@@ -139,7 +139,7 @@ class Zend_Service_ShortUrl_BitLy extends Zend_Service_ShortUrl_AbstractShortene
         $this->_validateUri($url);
         $this->_setAccessParameter();
 
-        $this->getHttpClient()->setUri($this->_APIUri.'/v3/shorten');
+        $this->getHttpClient()->setUri($this->_apiUri.'/v3/shorten');
         $this->getHttpClient()->setParameterGet('longUrl',$url);
         $this->getHttpClient()->setParameterGet('format','txt');
 
@@ -158,7 +158,7 @@ class Zend_Service_ShortUrl_BitLy extends Zend_Service_ShortUrl_AbstractShortene
         $this->_validateUri($shortenedUrl);
         $this->_setAccessParameter();
 
-        $this->getHttpClient()->setUri($this->_APIUri.'/v3/expand');
+        $this->getHttpClient()->setUri($this->_apiUri.'/v3/expand');
         $this->getHttpClient()->setParameterGet('shortUrl',$shortenedUrl);
         $this->getHttpClient()->setParameterGet('format','txt');
 

@@ -71,7 +71,7 @@ require_once 'Zend/Gdata/Gapps/EmailListRecipientFeed.php';
  * Because of the nature of this API, all access must occur over an
  * authenticated connection.
  *
- * @link http://code.google.com/APIs/apps/gdata_provisioning_API_v2.0_reference.html
+ * @link http://code.google.com/apis/apps/gdata_provisioning_api_v2.0_reference.html
  *
  * @category   Zend
  * @package    Zend_Gdata
@@ -82,7 +82,7 @@ require_once 'Zend/Gdata/Gapps/EmailListRecipientFeed.php';
 class Zend_Gdata_Gapps extends Zend_Gdata
 {
 
-    const APPS_BASE_FEED_URI = 'https://apps-APIs.google.com/a/feeds';
+    const APPS_BASE_FEED_URI = 'https://apps-apis.google.com/a/feeds';
     const AUTH_SERVICE_NAME = 'apps';
 
     /**
@@ -888,7 +888,7 @@ class Zend_Gdata_Gapps extends Zend_Gdata
     }
 
     // Convenience methods
-    // Specified at http://code.google.com/APIs/apps/gdata_provisioning_API_v2.0_reference.html#appendix_e
+    // Specified at http://code.google.com/apis/apps/gdata_provisioning_api_v2.0_reference.html#appendix_e
 
     /**
      * Create a new user entry and send it to the Google Apps servers.

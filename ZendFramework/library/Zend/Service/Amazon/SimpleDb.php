@@ -74,7 +74,7 @@ class Zend_Service_Amazon_SimpleDb extends Zend_Service_Amazon_Abstract
     /**
      * The API version to use
      */
-    protected $_sdbAPIVersion = '2009-04-15';
+    protected $_sdbApiVersion = '2009-04-15';
 
     /**
      * Signature Version
@@ -507,7 +507,7 @@ class Zend_Service_Amazon_SimpleDb extends Zend_Service_Amazon_Abstract
         $parameters['AWSAccessKeyId']   = $this->_getAccessKey();
         $parameters['SignatureVersion'] = $this->_signatureVersion;
         $parameters['Timestamp']        = gmdate('c');
-        $parameters['Version']          = $this->_sdbAPIVersion;
+        $parameters['Version']          = $this->_sdbApiVersion;
         $parameters['SignatureMethod']  = $this->_signatureMethod;
         $parameters['Signature']        = $this->_signParameters($parameters);
 
