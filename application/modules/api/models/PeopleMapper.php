@@ -31,6 +31,7 @@ class API_Model_PeopleMapper
     public function save(API_Model_People $people)
     {
         $data = array(
+            'id'            => $people->getId(),
             'firstname'     => $people->getFirstName(),
             'lastname'      => $people->getLastName(),
             'food'          => $people->getFavoriteFood(),
@@ -74,7 +75,18 @@ class API_Model_PeopleMapper
                     ->setFavoriteFood($row->food);
             $entries[] = $entry;
         }
-        return $entries;
+
+        foreach($entries as $entryObj)
+        {
+            $resultArray[] = 
+            [
+                'id'        => $entryObj->id,
+                'firstname' => $entryObj->firstName,
+                'lastname'  => $entryObj->lastName,
+                'food'      => $entryObj->favoriteFood
+            ];
+        }
+        echo json_encode($resultArray, JSON_PRETTY_PRINT);
     }
 }
 
