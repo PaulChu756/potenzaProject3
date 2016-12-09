@@ -24,8 +24,8 @@ require_once 'Zend/Http/Client.php';
 abstract class Zend_Service_Rackspace_Abstract
 {
     const VERSION                = 'v1.0';
-    const US_AUTH_URL            = 'https://auth.api.rackspacecloud.com';
-    const UK_AUTH_URL            = 'https://lon.auth.api.rackspacecloud.com';
+    const US_AUTH_URL            = 'https://auth.API.rackspacecloud.com';
+    const UK_AUTH_URL            = 'https://lon.auth.API.rackspacecloud.com';
     const API_FORMAT             = 'json';
     const USER_AGENT             = 'Zend_Service_Rackspace';
     const STORAGE_URL            = "X-Storage-Url";

@@ -172,7 +172,7 @@ class Zend_Gdata_Spreadsheets_WorksheetEntry extends Zend_Gdata_Entry
      * the array is an associative array with a 'value' and a 'function'.
      * Only non-empty cells are returned by default.  'range' is the
      * value of the 'range' query parameter specified at:
-     * http://code.google.com/apis/spreadsheets/reference.html#cells_Parameters
+     * http://code.google.com/APIs/spreadsheets/reference.html#cells_Parameters
      *
      * @param string $range The range of cells to retrieve
      * @param boolean $empty Whether to retrieve empty cells

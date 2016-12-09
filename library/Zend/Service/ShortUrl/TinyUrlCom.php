@@ -52,7 +52,7 @@ class Zend_Service_ShortUrl_TinyUrlCom extends Zend_Service_ShortUrl_AbstractSho
     {
         $this->_validateUri($url);
 
-        $serviceUri = 'http://tinyurl.com/api-create.php';
+        $serviceUri = 'http://tinyurl.com/API-create.php';
 
         $this->getHttpClient()->setUri($serviceUri);
         $this->getHttpClient()->setParameterGet('url', $url);

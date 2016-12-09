@@ -219,7 +219,7 @@ For terms of use, see http://www.unicode.org/copyright.html
 			<territory type="PH">Filipino</territory>
 			<territory type="PK">Pakistani</territory>
 			<territory type="PL">Polandi</territory>
-			<territory type="PM">Santapieli na Mikeloni</territory>
+			<territory type="PM">SantAPIeli na Mikeloni</territory>
 			<territory type="PN">Pitkailni</territory>
 			<territory type="PR">Pwetoliko</territory>
 			<territory type="PS">Ukingo wa Maghalibi na Ukanda wa Gaza wa Palestina</territory>
@@ -408,7 +408,7 @@ For terms of use, see http://www.unicode.org/copyright.html
 							<day type="sat">Jmo</day>
 						</dayWidth>
 						<dayWidth type="wide">
-							<day type="sun">Jumaapii</day>
+							<day type="sun">JumaAPIi</day>
 							<day type="mon">Jumaatatu</day>
 							<day type="tue">Jumaane</day>
 							<day type="wed">Jumaatano</day>

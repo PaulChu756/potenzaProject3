@@ -68,7 +68,7 @@ class Zend_Service_WindowsAzure_Storage_Queue extends Zend_Service_WindowsAzure_
 		parent::__construct($host, $accountName, $accountKey, $usePathStyleUri, $retryPolicy);
 		
 		// API version
-		$this->_apiVersion = '2009-09-19';
+		$this->_APIVersion = '2009-09-19';
 	}
 	
 	/**

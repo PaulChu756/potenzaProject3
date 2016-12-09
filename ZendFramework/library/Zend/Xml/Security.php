@@ -174,7 +174,7 @@ class Zend_Xml_Security
             )
         );
 
-        if (substr(php_sapi_name(), 0, 3) === 'fpm' && $isVulnerableVersion) {
+        if (substr(php_sAPI_name(), 0, 3) === 'fpm' && $isVulnerableVersion) {
             return true;
         }
         return false;

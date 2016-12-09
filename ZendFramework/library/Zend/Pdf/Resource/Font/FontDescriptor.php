@@ -124,7 +124,7 @@ class Zend_Pdf_Resource_Font_FontDescriptor
         $fontDescriptor->Ascent       = new Zend_Pdf_Element_Numeric($font->toEmSpace($fontParser->ascent));
         $fontDescriptor->Descent      = new Zend_Pdf_Element_Numeric($font->toEmSpace($fontParser->descent));
 
-        $fontDescriptor->CapHeight    = new Zend_Pdf_Element_Numeric($fontParser->capitalHeight);
+        $fontDescriptor->CapHeight    = new Zend_Pdf_Element_Numeric($fontParser->cAPItalHeight);
         /**
          * The vertical stem width is not yet extracted from the OpenType font
          * file. For now, record zero which is interpreted as 'unknown'.

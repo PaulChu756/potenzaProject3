@@ -69,7 +69,7 @@ class Zend_Service_SqlAzure_Management_Client
 	 * 
 	 * @var string
 	 */
-	protected $_apiVersion = '1.0';
+	protected $_APIVersion = '1.0';
 	
 	/**
 	 * Subscription ID
@@ -240,7 +240,7 @@ class Zend_Service_SqlAzure_Management_Client
 		//$headers["Expect"] = '';
 
 		// Add version header
-		$headers['x-ms-version'] = $this->_apiVersion;
+		$headers['x-ms-version'] = $this->_APIVersion;
 		    
 		// URL encoding
 		$path           = self::urlencode($path);

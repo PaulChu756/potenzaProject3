@@ -34,7 +34,7 @@ require_once 'Zend/Gdata.php';
 /**
  * Service class for interacting with the Google Base data API
  *
- * @link http://code.google.com/apis/base
+ * @link http://code.google.com/APIs/base
  *
  * @category   Zend
  * @package    Zend_Gdata
@@ -72,7 +72,7 @@ class Zend_Gdata_Gbase extends Zend_Gdata
         throw new Zend_Exception(
             'Google Base API has been discontinued by Google and was removed'
             . ' from Zend Framework in 1.12.0.  For more information see: '
-            . 'http://googlemerchantblog.blogspot.ca/2010/12/new-shopping-apis-and-deprecation-of.html'
+            . 'http://googlemerchantblog.blogspot.ca/2010/12/new-shopping-APIs-and-deprecation-of.html'
         );
     }
 }

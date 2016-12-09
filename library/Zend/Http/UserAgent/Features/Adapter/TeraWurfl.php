@@ -25,7 +25,7 @@
 require_once 'Zend/Http/UserAgent/Features/Adapter.php';
 
 /**
- * Features adapter build with the Tera Wurfl Api
+ * Features adapter build with the Tera Wurfl API
  * See installation instruction here : http://www.tera-wurfl.com/wiki/index.php/Installation
  * Download : http://www.tera-wurfl.com/wiki/index.php/Downloads
  *

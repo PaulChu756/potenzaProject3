@@ -45,14 +45,14 @@ For terms of use, see http://www.unicode.org/copyright.html
 			<language type="cv">Chuvash Iyápi</language>
 			<language type="cy">Wales Iyápi</language>
 			<language type="da">Dane Iyápi</language>
-			<language type="dak">Dakȟótiyapi</language>
+			<language type="dak">DakȟótiyAPI</language>
 			<language type="dar">Dargwa Iyápi</language>
 			<language type="de">Iyášiča Iyápi</language>
 			<language type="doi">Dogri Iyápi</language>
 			<language type="el">Greece Iyápi</language>
-			<language type="en">Wašíčuiyapi</language>
-			<language type="en_GB">Šagláša Wašíčuiyapi</language>
-			<language type="en_US">Mílahaŋska Wašíčuiyapi</language>
+			<language type="en">WašíčuiyAPI</language>
+			<language type="en_GB">Šagláša WašíčuiyAPI</language>
+			<language type="en_US">Mílahaŋska WašíčuiyAPI</language>
 			<language type="eo">Esperanto Iyápi</language>
 			<language type="es">Spayóla Iyápi</language>
 			<language type="es_419">Wiyóȟpeyata Spayóla Iyápi</language>
@@ -98,7 +98,7 @@ For terms of use, see http://www.unicode.org/copyright.html
 			<language type="la">Latin Iyápi</language>
 			<language type="lah">Lahnda Iyápi</language>
 			<language type="lb">Luxembourg Iyápi</language>
-			<language type="lkt">Lakȟólʼiyapi</language>
+			<language type="lkt">LakȟólʼiyAPI</language>
 			<language type="lo">Lao Iyápi</language>
 			<language type="lt">Lithuania Iyápilt</language>
 			<language type="lus">Mizo Iyápi</language>
@@ -168,7 +168,7 @@ For terms of use, see http://www.unicode.org/copyright.html
 			<territory type="019">Khéya Wíta</territory>
 			<territory type="142">Hazíla Makȟáwita</territory>
 			<territory type="150">Wašíču Makȟáwita</territory>
-			<territory type="CA">Uŋčíyapi Makȟóčhe</territory>
+			<territory type="CA">UŋčíyAPI Makȟóčhe</territory>
 			<territory type="CN">Pȟečhókaŋhaŋska Makȟóčhe</territory>
 			<territory type="DE">Iyášiča Makȟóčhe</territory>
 			<territory type="ES">Spayólaȟče Makȟóčhe</territory>
@@ -249,7 +249,7 @@ For terms of use, see http://www.unicode.org/copyright.html
 							<day type="wed">Aŋpétuyamni</day>
 							<day type="thu">Aŋpétutopa</day>
 							<day type="fri">Aŋpétuzaptaŋ</day>
-							<day type="sat">Owáŋgyužažapi</day>
+							<day type="sat">OwáŋgyužažAPI</day>
 						</dayWidth>
 					</dayContext>
 				</days>
@@ -318,10 +318,10 @@ For terms of use, see http://www.unicode.org/copyright.html
 				<relative type="0">Lé wí kiŋ</relative>
 				<relative type="1">Wí kiŋháŋ</relative>
 				<relativeTime type="future">
-					<relativeTimePattern count="other">Letáŋhaŋ wíyawapi {0} kiŋháŋ</relativeTimePattern>
+					<relativeTimePattern count="other">Letáŋhaŋ wíyawAPI {0} kiŋháŋ</relativeTimePattern>
 				</relativeTime>
 				<relativeTime type="past">
-					<relativeTimePattern count="other">Hékta wíyawapi {0} kʼuŋ héhaŋ</relativeTimePattern>
+					<relativeTimePattern count="other">Hékta wíyawAPI {0} kʼuŋ héhaŋ</relativeTimePattern>
 				</relativeTime>
 			</field>
 			<field type="week">
@@ -382,9 +382,9 @@ For terms of use, see http://www.unicode.org/copyright.html
 				<relative type="1">Aŋpétuzaptaŋ kiŋháŋ</relative>
 			</field>
 			<field type="sat">
-				<relative type="-1">Owáŋkayužažapi kʼuŋ héhaŋ</relative>
-				<relative type="0">Owáŋkayužažapi kiŋ lé</relative>
-				<relative type="1">Owáŋkayužažapi kiŋháŋ</relative>
+				<relative type="-1">OwáŋkayužažAPI kʼuŋ héhaŋ</relative>
+				<relative type="0">OwáŋkayužažAPI kiŋ lé</relative>
+				<relative type="1">OwáŋkayužažAPI kiŋháŋ</relative>
 			</field>
 			<field type="hour">
 				<displayName>Owápȟe</displayName>
@@ -437,7 +437,7 @@ For terms of use, see http://www.unicode.org/copyright.html
 				<unitPattern count="other">Owápȟe {0}</unitPattern>
 			</unit>
 			<unit type="duration-month">
-				<unitPattern count="other">Wíyawapi {0}</unitPattern>
+				<unitPattern count="other">WíyawAPI {0}</unitPattern>
 			</unit>
 			<unit type="duration-second">
 				<unitPattern count="other">Okpí {0}</unitPattern>
@@ -449,19 +449,19 @@ For terms of use, see http://www.unicode.org/copyright.html
 				<unitPattern count="other">ómakȟa {0}</unitPattern>
 			</unit>
 			<unit type="length-foot">
-				<unitPattern count="other">siíyutȟapi {0}</unitPattern>
+				<unitPattern count="other">siíyutȟAPI {0}</unitPattern>
 			</unit>
 			<unit type="length-inch">
 				<unitPattern count="other">oíyutȟe čísčila {0}</unitPattern>
 			</unit>
 			<unit type="length-mile">
-				<unitPattern count="other">makhíyutȟapi {0}</unitPattern>
+				<unitPattern count="other">makhíyutȟAPI {0}</unitPattern>
 			</unit>
 			<unit type="length-yard">
 				<unitPattern count="other">čhaéglepi {0}</unitPattern>
 			</unit>
 			<unit type="mass-pound">
-				<unitPattern count="other">tkeíyutȟapi {0}</unitPattern>
+				<unitPattern count="other">tkeíyutȟAPI {0}</unitPattern>
 			</unit>
 		</unitLength>
 		<unitLength type="short">
@@ -472,7 +472,7 @@ For terms of use, see http://www.unicode.org/copyright.html
 				<unitPattern count="other">Owápȟe {0}</unitPattern>
 			</unit>
 			<unit type="duration-month">
-				<unitPattern count="other">Wíyawapi {0}</unitPattern>
+				<unitPattern count="other">WíyawAPI {0}</unitPattern>
 			</unit>
 			<unit type="duration-second">
 				<unitPattern count="other">Okpí {0}</unitPattern>
@@ -484,19 +484,19 @@ For terms of use, see http://www.unicode.org/copyright.html
 				<unitPattern count="other">ómakȟa {0}</unitPattern>
 			</unit>
 			<unit type="length-foot">
-				<unitPattern count="other">siíyutȟapi {0}</unitPattern>
+				<unitPattern count="other">siíyutȟAPI {0}</unitPattern>
 			</unit>
 			<unit type="length-inch">
 				<unitPattern count="other">oíyutȟe čísčila {0}</unitPattern>
 			</unit>
 			<unit type="length-mile">
-				<unitPattern count="other">makhíyutȟapi {0}</unitPattern>
+				<unitPattern count="other">makhíyutȟAPI {0}</unitPattern>
 			</unit>
 			<unit type="length-yard">
 				<unitPattern count="other">čhaéglepi {0}</unitPattern>
 			</unit>
 			<unit type="mass-pound">
-				<unitPattern count="other">tkeíyutȟapi {0}</unitPattern>
+				<unitPattern count="other">tkeíyutȟAPI {0}</unitPattern>
 			</unit>
 		</unitLength>
 		<unitLength type="narrow">
@@ -519,7 +519,7 @@ For terms of use, see http://www.unicode.org/copyright.html
 				<unitPattern count="other">ómakȟa {0}</unitPattern>
 			</unit>
 			<unit type="length-foot">
-				<unitPattern count="other">siíyutȟapi {0}</unitPattern>
+				<unitPattern count="other">siíyutȟAPI {0}</unitPattern>
 			</unit>
 			<unit type="length-inch">
 				<unitPattern count="other">{0}″</unitPattern>

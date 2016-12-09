@@ -34,7 +34,7 @@ class Zend_Debug
     /**
      * @var string
      */
-    protected static $_sapi = null;
+    protected static $_sAPI = null;
 
     /**
      * Get the current value of the debug output environment.
@@ -42,24 +42,24 @@ class Zend_Debug
      *
      * @return string;
      */
-    public static function getSapi()
+    public static function getSAPI()
     {
-        if (self::$_sapi === null) {
-            self::$_sapi = PHP_SAPI;
+        if (self::$_sAPI === null) {
+            self::$_sAPI = PHP_SAPI;
         }
-        return self::$_sapi;
+        return self::$_sAPI;
     }
 
     /**
      * Set the debug ouput environment.
      * Setting a value of null causes Zend_Debug to use PHP_SAPI.
      *
-     * @param string $sapi
+     * @param string $sAPI
      * @return void;
      */
-    public static function setSapi($sapi)
+    public static function setSAPI($sAPI)
     {
-        self::$_sapi = $sapi;
+        self::$_sAPI = $sAPI;
     }
 
     /**
@@ -84,7 +84,7 @@ class Zend_Debug
 
         // neaten the newlines and indents
         $output = preg_replace("/\]\=\>\n(\s+)/m", "] => ", $output);
-        if (self::getSapi() == 'cli') {
+        if (self::getSAPI() == 'cli') {
             $output = PHP_EOL . $label
                     . PHP_EOL . $output
                     . PHP_EOL;

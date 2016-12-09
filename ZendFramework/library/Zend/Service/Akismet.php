@@ -48,7 +48,7 @@ class Zend_Service_Akismet extends Zend_Service_Abstract
      * Akismet API key
      * @var string
      */
-    protected $_apiKey;
+    protected $_APIKey;
 
     /**
      * Blog URL
@@ -77,14 +77,14 @@ class Zend_Service_Akismet extends Zend_Service_Abstract
     /**
      * Constructor
      *
-     * @param string $apiKey Akismet API key
+     * @param string $APIKey Akismet API key
      * @param string $blog Blog URL
      * @return void
      */
-    public function __construct($apiKey, $blog)
+    public function __construct($APIKey, $blog)
     {
         $this->setBlogUrl($blog)
-             ->setApiKey($apiKey)
+             ->setAPIKey($APIKey)
              ->setUserAgent('Zend Framework/' . Zend_Version::VERSION . ' | Akismet/1.11');
     }
 
@@ -122,20 +122,20 @@ class Zend_Service_Akismet extends Zend_Service_Abstract
      *
      * @return string
      */
-    public function getApiKey()
+    public function getAPIKey()
     {
-        return $this->_apiKey;
+        return $this->_APIKey;
     }
 
     /**
      * Set API key
      *
-     * @param string $apiKey
+     * @param string $APIKey
      * @return Zend_Service_Akismet
      */
-    public function setApiKey($apiKey)
+    public function setAPIKey($APIKey)
     {
-        $this->_apiKey = $apiKey;
+        $this->_APIKey = $APIKey;
         return $this;
     }
 
@@ -258,7 +258,7 @@ class Zend_Service_Akismet extends Zend_Service_Abstract
     public function verifyKey($key = null, $blog = null)
     {
         if (null === $key) {
-            $key = $this->getApiKey();
+            $key = $this->getAPIKey();
         }
 
         if (null === $blog) {
@@ -281,7 +281,7 @@ class Zend_Service_Akismet extends Zend_Service_Abstract
      * @return Zend_Http_Response
      * @throws Zend_Service_Exception if missing user_ip or user_agent fields
      */
-    protected function _makeApiCall($path, $params)
+    protected function _makeAPICall($path, $params)
     {
         if (empty($params['user_ip']) || empty($params['user_agent'])) {
             require_once 'Zend/Service/Exception.php';
@@ -292,7 +292,7 @@ class Zend_Service_Akismet extends Zend_Service_Abstract
             $params['blog'] = $this->getBlogUrl();
         }
 
-        return $this->_post($this->getApiKey() . '.rest.akismet.com', $path, $params);
+        return $this->_post($this->getAPIKey() . '.rest.akismet.com', $path, $params);
     }
 
     /**
@@ -323,7 +323,7 @@ class Zend_Service_Akismet extends Zend_Service_Abstract
      */
     public function isSpam($params)
     {
-        $response = $this->_makeApiCall('/1.1/comment-check', $params);
+        $response = $this->_makeAPICall('/1.1/comment-check', $params);
 
         $return = trim($response->getBody());
 
@@ -354,7 +354,7 @@ class Zend_Service_Akismet extends Zend_Service_Abstract
      */
     public function submitSpam($params)
     {
-        $response = $this->_makeApiCall('/1.1/submit-spam', $params);
+        $response = $this->_makeAPICall('/1.1/submit-spam', $params);
         $value    = trim($response->getBody());
         if ('invalid' == $value) {
             require_once 'Zend/Service/Exception.php';
@@ -382,6 +382,6 @@ class Zend_Service_Akismet extends Zend_Service_Abstract
      */
     public function submitHam($params)
     {
-        $response = $this->_makeApiCall('/1.1/submit-ham', $params);
+        $response = $this->_makeAPICall('/1.1/submit-ham', $params);
     }
 }

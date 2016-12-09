@@ -379,7 +379,7 @@ For terms of use, see http://www.unicode.org/copyright.html
 			<language type="pag">pangasinan</language>
 			<language type="pal">pahlavi</language>
 			<language type="pam">pampanga</language>
-			<language type="pap">papiamentu</language>
+			<language type="pap">pAPIamentu</language>
 			<language type="pau">palau</language>
 			<language type="peo">muinaispersia</language>
 			<language type="phn">foinikia</language>
@@ -517,7 +517,7 @@ For terms of use, see http://www.unicode.org/copyright.html
 			<language type="xh">xhosa</language>
 			<language type="xog">soga</language>
 			<language type="yao">jao</language>
-			<language type="yap">japi</language>
+			<language type="yap">jAPI</language>
 			<language type="yav">yangben</language>
 			<language type="ybb">yemba</language>
 			<language type="yi">jiddiš</language>

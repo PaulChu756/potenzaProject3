@@ -61,7 +61,7 @@ require_once 'Zend/Xml/Security.php';
  */
 class Zend_Service_Delicious
 {
-    const API_URI = 'https://api.del.icio.us';
+    const API_URI = 'https://API.del.icio.us';
 
     const PATH_UPDATE        = '/v1/posts/update';
     const PATH_TAGS          = '/v1/tags/get';

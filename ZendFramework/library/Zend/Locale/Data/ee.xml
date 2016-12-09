@@ -189,7 +189,7 @@ For terms of use, see http://www.unicode.org/copyright.html
 			<language type="os">ossetiagbe</language>
 			<language type="pa">pundzabgbe</language>
 			<language type="pag" draft="unconfirmed">pangsinagbe</language>
-			<language type="pap" draft="unconfirmed">papiamentogbe</language>
+			<language type="pap" draft="unconfirmed">pAPIamentogbe</language>
 			<language type="pau" draft="unconfirmed">paluagbe</language>
 			<language type="pl">polandgbe</language>
 			<language type="pon" draft="unconfirmed">ponpeiagbe</language>
@@ -3321,8 +3321,8 @@ For terms of use, see http://www.unicode.org/copyright.html
 			<zone type="Pacific/Wallis">
 				<exemplarCity>Wallis nutomegaƒoƒome</exemplarCity>
 			</zone>
-			<zone type="Pacific/Apia">
-				<exemplarCity>Apia nutomegaƒoƒome</exemplarCity>
+			<zone type="Pacific/APIa">
+				<exemplarCity>APIa nutomegaƒoƒome</exemplarCity>
 			</zone>
 			<zone type="Asia/Aden">
 				<exemplarCity>Aden nutomegaƒoƒome</exemplarCity>

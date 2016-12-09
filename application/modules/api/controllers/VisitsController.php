@@ -1,6 +1,6 @@
 <?php
 
-class Api_VisitsController extends Zend_Controller_Action
+class API_VisitsController extends Zend_Controller_Action
 {
 
     public function init()

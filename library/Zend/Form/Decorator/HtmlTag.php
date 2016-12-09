@@ -50,7 +50,7 @@ require_once 'Zend/Form/Decorator/Abstract.php';
 class Zend_Form_Decorator_HtmlTag extends Zend_Form_Decorator_Abstract
 {
     /**
-     * Character encoding to use when escaping attributes
+     * Character encoding to use when escAPIng attributes
      * @var string
      */
     protected $_encoding;

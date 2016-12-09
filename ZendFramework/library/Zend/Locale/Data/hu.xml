@@ -375,7 +375,7 @@ For terms of use, see http://www.unicode.org/copyright.html
 			<language type="pag">pangaszinan</language>
 			<language type="pal">pahlavi</language>
 			<language type="pam">pampangan</language>
-			<language type="pap">papiamentó</language>
+			<language type="pap">pAPIamentó</language>
 			<language type="pau">palaui</language>
 			<language type="peo">óperzsa</language>
 			<language type="phn">főniciai</language>
@@ -513,7 +513,7 @@ For terms of use, see http://www.unicode.org/copyright.html
 			<language type="xh">hosza</language>
 			<language type="xog" draft="contributed">szoga</language>
 			<language type="yao">jaó</language>
-			<language type="yap">japi</language>
+			<language type="yap">jAPI</language>
 			<language type="yav" draft="contributed">jangben</language>
 			<language type="ybb" draft="contributed">jemba</language>
 			<language type="yi">jiddis</language>
@@ -5098,10 +5098,10 @@ For terms of use, see http://www.unicode.org/copyright.html
 				<symbol>$</symbol>
 			</currency>
 			<currency type="USN">
-				<displayName>USA dollár (következő napi)</displayName>
+				<displayName>USA dollár (következő nAPI)</displayName>
 			</currency>
 			<currency type="USS">
-				<displayName>USA dollár (aznapi)</displayName>
+				<displayName>USA dollár (aznAPI)</displayName>
 			</currency>
 			<currency type="UYI">
 				<displayName>Uruguayi peso en unidades indexadas</displayName>

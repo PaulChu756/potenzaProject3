@@ -33,7 +33,7 @@ require_once 'Zend/Gdata/App.php';
  * As the Google data API protocol is based upon the Atom Publishing Protocol
  * (APP), Gdata functionality extends the appropriate Zend_Gdata_App classes
  *
- * @link http://code.google.com/apis/gdata/overview.html
+ * @link http://code.google.com/APIs/gdata/overview.html
  *
  * @category   Zend
  * @package    Zend_Gdata
@@ -49,7 +49,7 @@ class Zend_Gdata extends Zend_Gdata_App
      *
      * @var string
      */
-    const AUTH_SERVICE_NAME = 'xapi';
+    const AUTH_SERVICE_NAME = 'xAPI';
 
     /**
      * Default URI to which to POST.

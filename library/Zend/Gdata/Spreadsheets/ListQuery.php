@@ -34,7 +34,7 @@ require_once('Zend/Gdata/Query.php');
 /**
  * Assists in constructing queries for Google Spreadsheets lists
  *
- * @link http://code.google.com/apis/gdata/calendar/
+ * @link http://code.google.com/APIs/gdata/calendar/
  *
  * @category   Zend
  * @package    Zend_Gdata

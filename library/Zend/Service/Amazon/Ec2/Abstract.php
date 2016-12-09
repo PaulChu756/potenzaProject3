@@ -54,7 +54,7 @@ abstract class Zend_Service_Amazon_Ec2_Abstract extends Zend_Service_Amazon_Abst
     /**
      * The API version to use
      */
-    protected $_ec2ApiVersion = '2009-04-04';
+    protected $_ec2APIVersion = '2009-04-04';
 
     /**
      * Signature Version
@@ -202,7 +202,7 @@ abstract class Zend_Service_Amazon_Ec2_Abstract extends Zend_Service_Amazon_Abst
         $parameters['AWSAccessKeyId']   = $this->_getAccessKey();
         $parameters['SignatureVersion'] = $this->_ec2SignatureVersion;
         $parameters['Timestamp']        = gmdate('Y-m-d\TH:i:s\Z');
-        $parameters['Version']          = $this->_ec2ApiVersion;
+        $parameters['Version']          = $this->_ec2APIVersion;
         $parameters['SignatureMethod']  = $this->_ec2SignatureMethod;
         $parameters['Signature']        = $this->signParameters($parameters);
 

@@ -34,7 +34,7 @@ require_once 'Zend/Gdata/Feed.php';
 /**
  * Represents the Google Base Snippets Feed
  *
- * @link http://code.google.com/apis/base/
+ * @link http://code.google.com/APIs/base/
  *
  * @category   Zend
  * @package    Zend_Gdata

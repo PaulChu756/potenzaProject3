@@ -37,7 +37,7 @@ require_once 'Zend/Gdata/Geo.php';
 require_once 'Zend/Gdata/Geo/Extension/GeoRssWhere.php';
 
 /**
- * An Atom entry containing Geograpic data.
+ * An Atom entry containing GeogrAPIc data.
  *
  * @category   Zend
  * @package    Zend_Gdata

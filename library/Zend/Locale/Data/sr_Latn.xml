@@ -332,7 +332,7 @@ For terms of use, see http://www.unicode.org/copyright.html
 			<language type="pag">Pangasinski</language>
 			<language type="pal">Pahlavi</language>
 			<language type="pam">Pampanga</language>
-			<language type="pap">Papiamento</language>
+			<language type="pap">PAPIamento</language>
 			<language type="pau">Palauanski</language>
 			<language type="peo">Staropersijski</language>
 			<language type="phn">Feničanski</language>
@@ -3555,8 +3555,8 @@ For terms of use, see http://www.unicode.org/copyright.html
 			<zone type="Pacific/Wallis">
 				<exemplarCity>Valis</exemplarCity>
 			</zone>
-			<zone type="Pacific/Apia">
-				<exemplarCity draft="contributed">Apija</exemplarCity>
+			<zone type="Pacific/APIa">
+				<exemplarCity draft="contributed">APIja</exemplarCity>
 			</zone>
 			<zone type="Asia/Aden">
 				<exemplarCity>Aden</exemplarCity>

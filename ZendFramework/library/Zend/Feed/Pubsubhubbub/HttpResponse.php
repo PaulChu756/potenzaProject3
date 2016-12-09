@@ -220,7 +220,7 @@ class Zend_Feed_Pubsubhubbub_HttpResponse
     }
 
     /**
-     * Normalizes a header name to X-Capitalized-Names
+     * Normalizes a header name to X-CAPItalized-Names
      *
      * @param  string $name
      * @return string

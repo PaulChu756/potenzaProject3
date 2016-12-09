@@ -34,7 +34,7 @@ require_once 'Zend/Gdata/Entry.php';
 /**
  * Concrete class for working with Health profile entries.
  *
- * @link http://code.google.com/apis/health/
+ * @link http://code.google.com/APIs/health/
  *
  * @category   Zend
  * @package    Zend_Gdata

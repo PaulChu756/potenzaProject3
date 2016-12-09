@@ -41,7 +41,7 @@ class Zend_Service_ShortUrl_MetamarkNet extends Zend_Service_ShortUrl_AbstractSh
      */
     protected $_baseUri = 'http://xrl.us/';
 
-    protected $_apiUri = 'http://metamark.net/api/rest/simple';
+    protected $_APIUri = 'http://metamark.net/API/rest/simple';
 
     /**
      * This function shortens long url
@@ -54,7 +54,7 @@ class Zend_Service_ShortUrl_MetamarkNet extends Zend_Service_ShortUrl_AbstractSh
     {
         $this->_validateUri($url);
 
-        $this->getHttpClient()->setUri($this->_apiUri);
+        $this->getHttpClient()->setUri($this->_APIUri);
         $this->getHttpClient()->setParameterGet('long_url', $url);
 
         $response = $this->getHttpClient()->request();
@@ -75,7 +75,7 @@ class Zend_Service_ShortUrl_MetamarkNet extends Zend_Service_ShortUrl_AbstractSh
 
         $this->_verifyBaseUri($shortenedUrl);
 
-        $this->getHttpClient()->setUri($this->_apiUri);
+        $this->getHttpClient()->setUri($this->_APIUri);
         $this->getHttpClient()->setParameterGet('short_url', $shortenedUrl);
 
         $response = $this->getHttpClient()->request();

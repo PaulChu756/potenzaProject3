@@ -372,7 +372,7 @@ For terms of use, see http://www.unicode.org/copyright.html
 			<language type="pag">pangasinán</language>
 			<language type="pal">pahlavi</language>
 			<language type="pam">pampanga</language>
-			<language type="pap">papiamento</language>
+			<language type="pap">pAPIamento</language>
 			<language type="pau">palauano</language>
 			<language type="peo">persa antiguo</language>
 			<language type="phn">fenicio</language>
@@ -2499,7 +2499,7 @@ For terms of use, see http://www.unicode.org/copyright.html
 				<exemplarCity>Asjabad</exemplarCity>
 			</zone>
 			<zone type="Africa/Tunis">
-				<exemplarCity>Túnez capital</exemplarCity>
+				<exemplarCity>Túnez cAPItal</exemplarCity>
 			</zone>
 			<zone type="Europe/Istanbul">
 				<exemplarCity>Estambul</exemplarCity>

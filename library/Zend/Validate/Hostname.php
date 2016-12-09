@@ -254,7 +254,7 @@ class Zend_Validate_Hostname extends Zend_Validate_Abstract
         'cancerresearch',
         'canon',
         'capetown',
-        'capital',
+        'cAPItal',
         'car',
         'caravan',
         'cards',

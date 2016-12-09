@@ -21,7 +21,7 @@ function displayData()
 	$("#SelectHumanDropDown").change(function(){
 		$.ajax({
 			type: "GET",
-			url: "api/visits",
+			url: "API/visits",
 			dataType: "json",
 			success: function(data)
 			{
@@ -51,7 +51,7 @@ function populatePeople()
 {
 	$.ajax({
 		type:"GET",
-		url:"api/people",
+		url:"API/people",
 		dataType:"json",
 		success : function(data)
 		{
@@ -81,7 +81,7 @@ function populateStates()
 {
 	$.ajax({
 		type:"GET",
-		url:"api/states",
+		url:"API/states",
 		dataType:"json",
 		success : function(data)
 		{
@@ -109,7 +109,7 @@ function addPerson()
 {
 	$.ajax({
 		type: "POST",
-		url: "api/people", // api/people
+		url: "API/people", // API/people
 		data: $("#personForm").serialize(),
 		 success: function(data,status,xhr) 
 		{
@@ -139,7 +139,7 @@ function addVisit()
 {
 	$.ajax({
 		type: "POST",
-		url: "api/visits", // api/visits
+		url: "API/visits", // API/visits
 		data: $("#humanNameDropDown, #stateNameDropDown, #visitForm").serialize(),
 		success: function(data)
 		{

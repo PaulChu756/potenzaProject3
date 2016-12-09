@@ -37,7 +37,7 @@ require_once 'Zend/Queue/Adapter/AdapterAbstract.php';
 class Zend_Queue_Adapter_PlatformJobQueue extends Zend_Queue_Adapter_AdapterAbstract
 {
     /**
-     * @var ZendApi_JobQueue
+     * @var ZendAPI_JobQueue
      */
     protected $_zendQueue;
 
@@ -73,7 +73,7 @@ class Zend_Queue_Adapter_PlatformJobQueue extends Zend_Queue_Adapter_AdapterAbst
             throw new Zend_Queue_Exception('Platform Job Queue password should be provided');
         }
 
-        $this->_zendQueue = new ZendApi_Queue($options['host']);
+        $this->_zendQueue = new ZendAPI_Queue($options['host']);
 
         if (!$this->_zendQueue) {
             require_once 'Zend/Queue/Exception.php';
@@ -191,10 +191,10 @@ class Zend_Queue_Adapter_PlatformJobQueue extends Zend_Queue_Adapter_AdapterAbst
             $message = array('data' => $message);
         }
 
-        $zendApiJob = new $classname($message);
+        $zendAPIJob = new $classname($message);
 
         // Unfortunately, the Platform JQ API is PHP4-style...
-        $platformJob = $zendApiJob->getJob();
+        $platformJob = $zendAPIJob->getJob();
 
         $jobId = $this->_zendQueue->addJob($platformJob);
 
@@ -204,8 +204,8 @@ class Zend_Queue_Adapter_PlatformJobQueue extends Zend_Queue_Adapter_AdapterAbst
                 . $this->_zendQueue->getLastError());
         }
 
-        $zendApiJob->setJobId($jobId);
-        return $zendApiJob;
+        $zendAPIJob->setJobId($jobId);
+        return $zendAPIJob;
     }
 
     /**
@@ -329,7 +329,7 @@ class Zend_Queue_Adapter_PlatformJobQueue extends Zend_Queue_Adapter_AdapterAbst
     {
         $options = $this->_options['daemonOptions'];
 
-        $this->_zendQueue = new ZendApi_Queue($options['host']);
+        $this->_zendQueue = new ZendAPI_Queue($options['host']);
 
         if (!$this->_zendQueue) {
             require_once 'Zend/Queue/Exception.php';

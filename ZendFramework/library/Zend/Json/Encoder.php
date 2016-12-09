@@ -247,7 +247,7 @@ class Zend_Json_Encoder
 
 
     /**
-     * JSON encode a string value by escaping characters as necessary
+     * JSON encode a string value by escAPIng characters as necessary
      *
      * @param string& $value
      * @return string
@@ -454,7 +454,7 @@ class Zend_Json_Encoder
 
         /**
          * Iterate over every character in the string,
-         * escaping with a slash or encoding to UTF-8 where necessary
+         * escAPIng with a slash or encoding to UTF-8 where necessary
          */
         for($i = 0; $i < $strlen_var; $i++) {
             $ord_var_c = ord($value[$i]);

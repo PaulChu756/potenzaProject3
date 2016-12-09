@@ -48,7 +48,7 @@ class Zend_Mobile_Push_Gcm extends Zend_Mobile_Push_Abstract
     /**
      * @const string Server URI
      */
-    const SERVER_URI = 'https://android.googleapis.com/gcm/send';
+    const SERVER_URI = 'https://android.googleAPIs.com/gcm/send';
 
     /**
      * Http Client
@@ -62,16 +62,16 @@ class Zend_Mobile_Push_Gcm extends Zend_Mobile_Push_Abstract
      *
      * @var string
      */
-    protected $_apiKey;
+    protected $_APIKey;
 
     /**
      * Get API Key
      *
      * @return string
      */
-    public function getApiKey()
+    public function getAPIKey()
     {
-        return $this->_apiKey;
+        return $this->_APIKey;
     }
 
     /**
@@ -81,12 +81,12 @@ class Zend_Mobile_Push_Gcm extends Zend_Mobile_Push_Abstract
      * @return Zend_Mobile_Push_Gcm
      * @throws Zend_Mobile_Push_Exception
      */
-    public function setApiKey($key)
+    public function setAPIKey($key)
     {
         if (!is_string($key) || empty($key)) {
-            throw new Zend_Mobile_Push_Exception('The api key must be a string and not empty');
+            throw new Zend_Mobile_Push_Exception('The API key must be a string and not empty');
         }
-        $this->_apiKey = $key;
+        $this->_APIKey = $key;
         return $this;
     }
 
@@ -138,7 +138,7 @@ class Zend_Mobile_Push_Gcm extends Zend_Mobile_Push_Abstract
 
         $client = $this->getHttpClient();
         $client->setUri(self::SERVER_URI);
-        $client->setHeaders('Authorization', 'key=' . $this->getApiKey());
+        $client->setHeaders('Authorization', 'key=' . $this->getAPIKey());
 
         $response = $client->setRawData($message->toJson(), 'application/json')
                            ->request('POST');

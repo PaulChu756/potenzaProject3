@@ -372,7 +372,7 @@ For terms of use, see http://www.unicode.org/copyright.html
 			<language type="pag">pangasinan</language>
 			<language type="pal">pahlavi</language>
 			<language type="pam">pampanga</language>
-			<language type="pap">papiemento</language>
+			<language type="pap">pAPIemento</language>
 			<language type="pau">palau</language>
 			<language type="peo">senoji persų</language>
 			<language type="phn">finikiečių</language>
@@ -497,7 +497,7 @@ For terms of use, see http://www.unicode.org/copyright.html
 			<language type="vai">vai</language>
 			<language type="ve">venda</language>
 			<language type="vi">vietnamiečių</language>
-			<language type="vo">volapiuk</language>
+			<language type="vo">volAPIuk</language>
 			<language type="vot">votik</language>
 			<language type="vun">vunjo</language>
 			<language type="wa">valonų</language>
@@ -3232,8 +3232,8 @@ For terms of use, see http://www.unicode.org/copyright.html
 			<zone type="Pacific/Wallis">
 				<exemplarCity>Volisas</exemplarCity>
 			</zone>
-			<zone type="Pacific/Apia">
-				<exemplarCity>Apija</exemplarCity>
+			<zone type="Pacific/APIa">
+				<exemplarCity>APIja</exemplarCity>
 			</zone>
 			<zone type="Asia/Aden">
 				<exemplarCity>Adenas</exemplarCity>

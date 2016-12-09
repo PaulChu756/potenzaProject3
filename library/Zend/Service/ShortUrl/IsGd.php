@@ -52,7 +52,7 @@ class Zend_Service_ShortUrl_IsGd extends Zend_Service_ShortUrl_AbstractShortener
     {
         $this->_validateUri($url);
 
-        $serviceUri = 'http://is.gd/api.php';
+        $serviceUri = 'http://is.gd/API.php';
 
         $this->getHttpClient()->resetParameters(true);
         $this->getHttpClient()->setUri($serviceUri);

@@ -552,7 +552,7 @@ For terms of use, see http://www.unicode.org/copyright.html
 			<territory type="PH">Filipino</territory>
 			<territory type="PK">Pakistani</territory>
 			<territory type="PL">Polandi</territory>
-			<territory type="PM">Santapieri na Mikeloni</territory>
+			<territory type="PM">SantAPIeri na Mikeloni</territory>
 			<territory type="PN">Pitkairni</territory>
 			<territory type="PR">Pwetoriko</territory>
 			<territory type="PS">Maeneo ya Palestina</territory>
@@ -749,7 +749,7 @@ For terms of use, see http://www.unicode.org/copyright.html
 			<transformName type="x-Halfwidth">Nusu upana</transformName>
 			<transformName type="x-Jamo">Kijamo</transformName>
 			<transformName type="x-Pinyin">Kipinyin</transformName>
-			<transformName type="x-Publishing">Inachapishwa</transformName>
+			<transformName type="x-Publishing">InachAPIshwa</transformName>
 		</transformNames>
 		<measurementSystemNames>
 			<measurementSystemName type="metric">Mfumo wa Mita</measurementSystemName>
@@ -1007,7 +1007,7 @@ For terms of use, see http://www.unicode.org/copyright.html
 				<days>
 					<dayContext type="format">
 						<dayWidth type="abbreviated">
-							<day type="sun">Jumapili</day>
+							<day type="sun">JumAPIli</day>
 							<day type="mon">Jumatatu</day>
 							<day type="tue">Jumanne</day>
 							<day type="wed">Jumatano</day>
@@ -1016,7 +1016,7 @@ For terms of use, see http://www.unicode.org/copyright.html
 							<day type="sat">Jumamosi</day>
 						</dayWidth>
 						<dayWidth type="short">
-							<day type="sun">Jumapili</day>
+							<day type="sun">JumAPIli</day>
 							<day type="mon">Jumatatu</day>
 							<day type="tue">Jumanne</day>
 							<day type="wed">Jumatano</day>
@@ -1025,7 +1025,7 @@ For terms of use, see http://www.unicode.org/copyright.html
 							<day type="sat">Jumamosi</day>
 						</dayWidth>
 						<dayWidth type="wide">
-							<day type="sun">Jumapili</day>
+							<day type="sun">JumAPIli</day>
 							<day type="mon">Jumatatu</day>
 							<day type="tue">Jumanne</day>
 							<day type="wed">Jumatano</day>
@@ -1045,7 +1045,7 @@ For terms of use, see http://www.unicode.org/copyright.html
 							<day type="sat">1</day>
 						</dayWidth>
 						<dayWidth type="short">
-							<day type="sun">Jumapili</day>
+							<day type="sun">JumAPIli</day>
 							<day type="mon">Jumatatu</day>
 							<day type="tue">Jumanne</day>
 							<day type="wed">Jumatano</day>
@@ -1378,9 +1378,9 @@ For terms of use, see http://www.unicode.org/copyright.html
 				<displayName>Siku ya wiki</displayName>
 			</field>
 			<field type="sun">
-				<relative type="-1">Jumapili iliyopita</relative>
-				<relative type="0">Jumapili hii</relative>
-				<relative type="1">Jumapili ijayo</relative>
+				<relative type="-1">JumAPIli iliyopita</relative>
+				<relative type="0">JumAPIli hii</relative>
+				<relative type="1">JumAPIli ijayo</relative>
 			</field>
 			<field type="mon">
 				<relative type="-1">Jumatatu iliyopita</relative>

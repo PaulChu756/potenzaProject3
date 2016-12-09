@@ -35,7 +35,7 @@ require_once 'Zend/Gdata/Gbase/Query.php';
 /**
  * Assists in constructing queries for Google Base Customer Items Feed
  *
- * @link http://code.google.com/apis/base/
+ * @link http://code.google.com/APIs/base/
  *
  * @category   Zend
  * @package    Zend_Gdata

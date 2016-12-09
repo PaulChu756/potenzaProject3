@@ -47,7 +47,7 @@ require_once 'Zend/Gdata/Photos/PhotoFeed.php';
  * Like other service classes in this module, this class provides access via
  * an HTTP client to Google servers for working with entries and feeds.
  *
- * @link http://code.google.com/apis/picasaweb/gdata.html
+ * @link http://code.google.com/APIs/picasaweb/gdata.html
  *
  * @category   Zend
  * @package    Zend_Gdata
@@ -65,7 +65,7 @@ class Zend_Gdata_Photos extends Zend_Gdata
     /**
      * Default projection when interacting with the Picasa server.
      */
-    const DEFAULT_PROJECTION = 'api';
+    const DEFAULT_PROJECTION = 'API';
 
     /**
      * The default visibility to filter events by.

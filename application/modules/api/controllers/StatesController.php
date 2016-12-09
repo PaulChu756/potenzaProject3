@@ -1,6 +1,6 @@
 <?php
 
-class Api_StatesController extends Zend_Controller_Action
+class API_StatesController extends Zend_Controller_Action
 {
 
     public function init()

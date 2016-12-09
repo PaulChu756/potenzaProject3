@@ -60,9 +60,9 @@ For terms of use, see http://www.unicode.org/copyright.html
 			<language type="bfd" draft="unconfirmed">lea fakapafuti</language>
 			<language type="bg">lea fakapulukalia</language>
 			<language type="bho" draft="unconfirmed">lea fakaposipuli</language>
-			<language type="bi" draft="unconfirmed">lea fakapisilama</language>
-			<language type="bik" draft="unconfirmed">lea fakapikoli</language>
-			<language type="bin" draft="unconfirmed">lea fakapini</language>
+			<language type="bi" draft="unconfirmed">lea fakAPIsilama</language>
+			<language type="bik" draft="unconfirmed">lea fakAPIkoli</language>
+			<language type="bin" draft="unconfirmed">lea fakAPIni</language>
 			<language type="bkm" draft="unconfirmed">lea fakakome</language>
 			<language type="bla" draft="unconfirmed">lea fakasikesikā</language>
 			<language type="bm" draft="unconfirmed">lea fakapamipala</language>
@@ -76,7 +76,7 @@ For terms of use, see http://www.unicode.org/copyright.html
 			<language type="bua" draft="unconfirmed">lea puliati</language>
 			<language type="bug" draft="unconfirmed">lea fakapukisi</language>
 			<language type="bum" draft="unconfirmed">lea fakapulu</language>
-			<language type="byn" draft="unconfirmed">lea fakapilini</language>
+			<language type="byn" draft="unconfirmed">lea fakAPIlini</language>
 			<language type="byv" draft="unconfirmed">lea fakametūmipa</language>
 			<language type="ca">lea fakakatalani</language>
 			<language type="cad" draft="unconfirmed">lea fakakato</language>
@@ -132,8 +132,8 @@ For terms of use, see http://www.unicode.org/copyright.html
 			<language type="en">lea fakapālangi</language>
 			<language type="en_AU">lea fakapālangi-ʻaositelēlia</language>
 			<language type="en_CA">lea fakapālangi-kānata</language>
-			<language type="en_GB">lea fakapilitānia</language>
-			<language type="en_GB" alt="short">lea fakapilitānia</language>
+			<language type="en_GB">lea fakAPIlitānia</language>
+			<language type="en_GB" alt="short">lea fakAPIlitānia</language>
 			<language type="en_US">lea fakapālangi-ʻamelika</language>
 			<language type="eo">lea fakaʻesipulanito</language>
 			<language type="es">lea fakasīpenisi</language>
@@ -213,12 +213,12 @@ For terms of use, see http://www.unicode.org/copyright.html
 			<language type="jv">lea fakasava</language>
 			<language type="ka">lea fakaseōsia</language>
 			<language type="kaa" draft="unconfirmed">lea fakakala-kalipaki</language>
-			<language type="kab" draft="unconfirmed">lea fakakapile</language>
+			<language type="kab" draft="unconfirmed">lea fakakAPIle</language>
 			<language type="kac" draft="unconfirmed">lea fakakasini</language>
 			<language type="kaj" draft="unconfirmed">lea fakasisū</language>
 			<language type="kam" draft="unconfirmed">lea fakakamipa</language>
 			<language type="kbd" draft="unconfirmed">lea fakakapālitia</language>
-			<language type="kcg" draft="unconfirmed">lea fakatiapi</language>
+			<language type="kcg" draft="unconfirmed">lea fakatiAPI</language>
 			<language type="kde" draft="unconfirmed">lea fakamakōnite</language>
 			<language type="kea" draft="unconfirmed">lea fakakapuvelitianu</language>
 			<language type="kfo" draft="unconfirmed">lea fakakolo</language>
@@ -345,11 +345,11 @@ For terms of use, see http://www.unicode.org/copyright.html
 			<language type="or">lea fakaʻinitia-ʻolāea</language>
 			<language type="os">lea ʻosetiki</language>
 			<language type="osa" draft="unconfirmed">lea fakaʻosēse</language>
-			<language type="pa">lea fakapūnusapi</language>
+			<language type="pa">lea fakapūnusAPI</language>
 			<language type="pag" draft="unconfirmed">lea fakapangasina</language>
 			<language type="pal" draft="unconfirmed">lea fakapālavi</language>
 			<language type="pam" draft="unconfirmed">lea fakapamipanga</language>
-			<language type="pap" draft="unconfirmed">lea fakapapiamēnito</language>
+			<language type="pap" draft="unconfirmed">lea fakapAPIamēnito</language>
 			<language type="pau" draft="unconfirmed">lea fakapalau</language>
 			<language type="peo" draft="unconfirmed">lea fakapēsia motuʻa</language>
 			<language type="phn" draft="unconfirmed">lea fakafoinikia</language>
@@ -467,7 +467,7 @@ For terms of use, see http://www.unicode.org/copyright.html
 			<language type="vai" draft="unconfirmed">lea fakavai</language>
 			<language type="ve">lea fakavenitā</language>
 			<language type="vi">lea fakavietinemi</language>
-			<language type="vo" draft="unconfirmed">lea fakavolapiki</language>
+			<language type="vo" draft="unconfirmed">lea fakavolAPIki</language>
 			<language type="vot" draft="unconfirmed">lea fakavotiki</language>
 			<language type="vun" draft="unconfirmed">lea fakavūniso</language>
 			<language type="wa" draft="unconfirmed">lea fakaʻualonia</language>
@@ -480,7 +480,7 @@ For terms of use, see http://www.unicode.org/copyright.html
 			<language type="xh">lea fakatōsa</language>
 			<language type="xog" draft="unconfirmed">lea fakasoka</language>
 			<language type="yao" draft="unconfirmed">lea fakaʻiao</language>
-			<language type="yap" draft="unconfirmed">lea fakaʻiapi</language>
+			<language type="yap" draft="unconfirmed">lea fakaʻiAPI</language>
 			<language type="yav" draft="unconfirmed">lea fakaʻiangipeni</language>
 			<language type="ybb" draft="unconfirmed">lea fakaʻiēmipa</language>
 			<language type="yi" draft="unconfirmed">lea fakaītisi</language>
@@ -659,9 +659,9 @@ For terms of use, see http://www.unicode.org/copyright.html
 			<territory type="CC">ʻOtumotu Koko</territory>
 			<territory type="CD">Kongo - Kinisasa</territory>
 			<territory type="CD" alt="variant">Kongo (LTK)</territory>
-			<territory type="CF">Lipapilika ʻAfilika Lotoloto</territory>
+			<territory type="CF">LipAPIlika ʻAfilika Lotoloto</territory>
 			<territory type="CG">Kongo - Palasavila</territory>
-			<territory type="CG" alt="variant">Lipapilika Kongo</territory>
+			<territory type="CG" alt="variant">LipAPIlika Kongo</territory>
 			<territory type="CH">Suisilani</territory>
 			<territory type="CI">Matāfonua ʻAivili</territory>
 			<territory type="CK">ʻOtumotu Kuki</territory>
@@ -676,13 +676,13 @@ For terms of use, see http://www.unicode.org/copyright.html
 			<territory type="CW">Kulasao</territory>
 			<territory type="CX">Motu Kilisimasi</territory>
 			<territory type="CY">Saipalesi</territory>
-			<territory type="CZ">Lipapilika Seki</territory>
+			<territory type="CZ">LipAPIlika Seki</territory>
 			<territory type="DE">Siamane</territory>
 			<territory type="DG">Tieko Kāsia</territory>
 			<territory type="DJ">Siputi</territory>
 			<territory type="DK">Tenimaʻake</territory>
 			<territory type="DM">Tominika</territory>
-			<territory type="DO">Lipapilika Tominika</territory>
+			<territory type="DO">LipAPIlika Tominika</territory>
 			<territory type="DZ">ʻAisilia</territory>
 			<territory type="EA">Siuta mo Melila</territory>
 			<territory type="EC">ʻEkuetoa</territory>
@@ -732,7 +732,7 @@ For terms of use, see http://www.unicode.org/copyright.html
 			<territory type="IL">ʻIsileli</territory>
 			<territory type="IM">Motu Mani</territory>
 			<territory type="IN">ʻInitia</territory>
-			<territory type="IO">Potu fonua moana ʻInitia fakapilitānia</territory>
+			<territory type="IO">Potu fonua moana ʻInitia fakAPIlitānia</territory>
 			<territory type="IQ">ʻIulaaki</territory>
 			<territory type="IR">ʻIulaani</territory>
 			<territory type="IS">ʻAisilani</territory>
@@ -871,7 +871,7 @@ For terms of use, see http://www.unicode.org/copyright.html
 			<territory type="VA">Kolo Vatikani</territory>
 			<territory type="VC">Sā Viniseni mo Kulenatini</territory>
 			<territory type="VE">Venesuela</territory>
-			<territory type="VG">ʻOtumotu Vilikini fakapilitānia</territory>
+			<territory type="VG">ʻOtumotu Vilikini fakAPIlitānia</territory>
 			<territory type="VI">ʻOtumotu Vilikini fakaʻamelika</territory>
 			<territory type="VN">Vietinemi</territory>
 			<territory type="VU">Vanuatu</territory>
@@ -986,7 +986,7 @@ For terms of use, see http://www.unicode.org/copyright.html
 		</types>
 		<measurementSystemNames>
 			<measurementSystemName type="metric">fakamita</measurementSystemName>
-			<measurementSystemName type="UK">fakapilitānia</measurementSystemName>
+			<measurementSystemName type="UK">fakAPIlitānia</measurementSystemName>
 			<measurementSystemName type="US">fakaʻamelika</measurementSystemName>
 		</measurementSystemNames>
 		<codePatterns>
@@ -2307,7 +2307,7 @@ For terms of use, see http://www.unicode.org/copyright.html
 			</metazone>
 			<metazone type="Pitcairn">
 				<long>
-					<standard draft="unconfirmed">houa fakapitikani</standard>
+					<standard draft="unconfirmed">houa fakAPItikani</standard>
 				</long>
 			</metazone>
 			<metazone type="Ponape">

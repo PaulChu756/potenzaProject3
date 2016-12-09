@@ -1,6 +1,6 @@
 <?php
 
-class Api_PeopleController extends Zend_Controller_Action
+class API_PeopleController extends Zend_Controller_Action
 {
 
     public function init()

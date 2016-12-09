@@ -646,8 +646,8 @@ For terms of use, see http://www.unicode.org/copyright.html
 			<mapZone other="Tonga Standard Time" territory="ZZ" type="Etc/GMT-13"/>
 
 			<!-- (UTC+13:00) Samoa -->
-			<mapZone other="Samoa Standard Time" territory="001" type="Pacific/Apia"/>
-			<mapZone other="Samoa Standard Time" territory="WS" type="Pacific/Apia"/>
+			<mapZone other="Samoa Standard Time" territory="001" type="Pacific/APIa"/>
+			<mapZone other="Samoa Standard Time" territory="WS" type="Pacific/APIa"/>
 		</mapTimezones>
 	</windowsZones>
 </supplementalData>

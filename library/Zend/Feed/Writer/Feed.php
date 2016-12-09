@@ -168,7 +168,7 @@ implements Iterator, Countable
 
     /**
      * Orders all indexed entries by date, thus offering date ordered readable
-     * content where a parser (or Homo Sapien) ignores the generic rule that
+     * content where a parser (or Homo SAPIen) ignores the generic rule that
      * XML element order is irrelevant and has no intrinsic meaning.
      *
      * Using this method will alter the original indexation.

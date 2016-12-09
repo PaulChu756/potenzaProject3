@@ -13,7 +13,7 @@
 
 Welcome to the Zend Framework 1.12 Release! 
 
-Master: [![Build Status](https://api.travis-ci.org/zendframework/zf1.png?branch=master)](https://travis-ci.org/zendframework/zf1)
+Master: [![Build Status](https://API.travis-ci.org/zendframework/zf1.png?branch=master)](https://travis-ci.org/zendframework/zf1)
 
 RELEASE INFORMATION
 ===================
@@ -78,7 +78,7 @@ to collecting an disseminating a “database” of browser capabilities. PHP
 has built-in support for using these files via the get_browser()
 function. This function requires that your php.ini provides a browscap
 entry pointing to the PHP-specific php_browscap.ini file which is
-available at http://browsers.garykeith.com/stream.asp?PHP_BrowsCapINI.
+available at http://browsers.garykeith.com/stream.asp?PHP_BrowsCAPINI.
 
 Zend_Http_UserAgent_Features_Adapter_Browscap was created by Matthew
 Weier O’Phinney
@@ -105,11 +105,11 @@ Zend_Gdata_Analytics was contributed by Daniel Hartmann.
 Removed features
 ================
 
-Zend_Http_UserAgent_Features_Adapter_WurflApi
+Zend_Http_UserAgent_Features_Adapter_WurflAPI
 ---------------------------------------------
 
-Due to the changes in licensing of WURFL, we have removed the WurflApi
-adapter. We will be providing the WurflApi adapter to ScientiaMobile so
+Due to the changes in licensing of WURFL, we have removed the WurflAPI
+adapter. We will be providing the WurflAPI adapter to ScientiaMobile so
 that users of WURFL will still have that option.
 
 Bug Fixes

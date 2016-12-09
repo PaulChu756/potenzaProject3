@@ -34,7 +34,7 @@ require_once('Zend/Gdata/Query.php');
 /**
  * Assists in constructing queries for Google Health
  *
- * @link http://code.google.com/apis/health
+ * @link http://code.google.com/APIs/health
  *
  * @category   Zend
  * @package    Zend_Gdata
