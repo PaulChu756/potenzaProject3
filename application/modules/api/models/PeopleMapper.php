@@ -81,9 +81,9 @@ class API_Model_PeopleMapper
             $resultArray[] = 
             [
                 'id'        => $entryObj->id,
-                'firstname' => $entryObj->firstName,
-                'lastname'  => $entryObj->lastName,
-                'food'      => $entryObj->favoriteFood
+                'firstname' => $entryObj->firstname,
+                'lastname'  => $entryObj->lastname,
+                'food'      => $entryObj->favoritefood
             ];
         }
         echo json_encode($resultArray, JSON_PRETTY_PRINT);
