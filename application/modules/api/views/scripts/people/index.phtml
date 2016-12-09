@@ -1,4 +1,11 @@
 <br /><br />
-<div id="view-content">
-	<p>View script for controller <b>People</b> and script/action name <b>index</b></p>
-</div>
+
+<?php 
+	foreach ($this->entries as $entry)
+	{
+		echo json_encode($this->escape($entry->firstName), JSON_PRETTY_PRINT);
+		echo json_encode($this->escape($entry->lastName), JSON_PRETTY_PRINT);
+		echo json_encode($this->escape($entry->favoriteFood), JSON_PRETTY_PRINT) . "<br>";
+	}
+	
+?>

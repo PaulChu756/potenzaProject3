@@ -11,7 +11,7 @@ class API_StatesController extends Zend_Controller_Action
     public function indexAction()
     {
         // action body
-        echo "states controller";
+        echo "states api controller";
     }
 }
 

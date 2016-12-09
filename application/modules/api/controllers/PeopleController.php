@@ -11,7 +11,6 @@ class API_PeopleController extends Zend_Controller_Action
     public function indexAction()
     {
         // action body
-        echo "people controller";
         $people = new API_Model_PeopleMapper();
         $this->view->entries = $people->fetchAll();
     }
