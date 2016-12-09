@@ -33,7 +33,7 @@ class Application_Model_PeopleMapper
         $data = array(
             'firstname'     => $people->getFirstName(),
             'lastname'      => $people->getLastName(),
-            'favoriteFood'  => $people->getFavoriteFood(),
+            'food'          => $people->getFavoriteFood(),
         );
 
         if(null === ($id = $people->getId()))
@@ -58,7 +58,7 @@ class Application_Model_PeopleMapper
         $people->setId($row->id)
                 ->setFirstName($row->firstname)
                 ->setLastName($row->lastname)
-                ->setFavoriteFood($row->favoriteFood);
+                ->setFavoriteFood($row->food);
     }
 
     public function fetchAll()
@@ -71,7 +71,7 @@ class Application_Model_PeopleMapper
             $entry->setId($row->id)
                     ->setFirstName($row->firstname)
                     ->setLastName($row->lastname)
-                    ->setFavoriteFood($row->favoriteFood);
+                    ->setFavoriteFood($row->food);
             $entries[] = $entry;
         }
         return $entries;

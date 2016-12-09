@@ -31,9 +31,9 @@ class API_Model_PeopleMapper
     public function save(API_Model_People $people)
     {
         $data = array(
-            'firstName'     => $people->getFirstName(),
-            'lastName'      => $people->getLastName(),
-            'favoriteFood'  => $people->getFavoriteFood(),
+            'firstname'     => $people->getFirstName(),
+            'lastname'      => $people->getLastName(),
+            'food'          => $people->getFavoriteFood(),
         );
 
         if(null === ($id = $people->getId()))
@@ -56,9 +56,9 @@ class API_Model_PeopleMapper
         }
         $row = $result->current();
         $people->setId($row->id)
-                ->setFirstName($row->firstName)
-                ->setLastName($row->lastName)
-                ->setFavoriteFood($row->favoriteFood);
+                ->setFirstName($row->firstname)
+                ->setLastName($row->lastname)
+                ->setFavoriteFood($row->food);
     }
 
     public function fetchAll()
@@ -69,9 +69,9 @@ class API_Model_PeopleMapper
         {
             $entry = new API_Model_People();
             $entry->setId($row->id)
-                    ->setFirstName($row->firstName)
-                    ->setLastName($row->lastName)
-                    ->setFavoriteFood($row->favoriteFood);
+                    ->setFirstName($row->firstname)
+                    ->setLastName($row->lastname)
+                    ->setFavoriteFood($row->food);
             $entries[] = $entry;
         }
         return $entries;
