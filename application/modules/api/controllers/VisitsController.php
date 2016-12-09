@@ -12,6 +12,8 @@ class API_VisitsController extends Zend_Controller_Action
     {
         // action body
         echo "visits api controller";
+        $visits = new API_Model_VisitsMapper();
+        $this->view->entries = $visits->fetchAll();
     }
 }
 

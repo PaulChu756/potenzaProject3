@@ -48,8 +48,30 @@ class API_Model_PeopleMapper
         }
     }
 
-    public function find($id, API_Model_People $people)
+    public function getPeople($id=0)
     {
+        $requestURI = parse_url($_SERVER['REQUEST_URI']);
+        $segments = explode('/', $requestURI['path']);
+        $apiVars = [];
+
+        $i = 2;
+        while($i < count($segments)) 
+        {    
+            if($segments[$i+1])
+            {  
+                $apiVars[$segments[$i]] = $segments[$i+1];  
+                $i += 2;    
+            }
+            else 
+            {  
+                $apiVars[$segments[$i]] = null;  
+                $i++;    
+            }
+        }
+
+        header('Content-Type: application/json');
+
+        /*
         $result = $this->getDbTable()->find($id);
         if(0 == count($result))
         {
@@ -60,6 +82,7 @@ class API_Model_PeopleMapper
                 ->setFirstName($row->firstname)
                 ->setLastName($row->lastname)
                 ->setFavoriteFood($row->food);
+        */
     }
 
     public function fetchAll()
