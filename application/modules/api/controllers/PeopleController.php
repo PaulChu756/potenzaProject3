@@ -12,7 +12,9 @@ class API_PeopleController extends Zend_Controller_Action
     {
         // action body
         $people = new API_Model_PeopleMapper();
-        $this->view->entries = $people->fetchAll();
+        $entry = new API_Model_People();
+        //$this->view->entries = $people->fetchAll();
+        $this->view->entries = $people->find(5, $entry);
     }
 }
 
