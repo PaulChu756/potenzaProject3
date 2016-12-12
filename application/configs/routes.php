@@ -1,7 +1,7 @@
 <?php
 
+//get all people
 $route = new Zend_Controller_Router_Route(
-    //get all people
     'api/people',
     array(
         'module'        => 'API',
@@ -10,11 +10,10 @@ $route = new Zend_Controller_Router_Route(
     )
 );
 $router->addRoute('people', $route);
-//var_dump($router);
 
+//get by id
 /*
 $route = new Zend_Controller_Router_Route(
-    //get by id
     'api/people/:id',
     array(
         'module'        => 'API',

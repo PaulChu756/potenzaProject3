@@ -2,12 +2,6 @@
 
 class API_PeopleController extends Zend_Controller_Action
 {
-
-    public function init()
-    {
-        /* Initialize action controller here */
-    }
-
     public function indexAction()
     {
         $peopleMapper = new API_Model_PeopleMapper();
@@ -25,12 +19,9 @@ class API_PeopleController extends Zend_Controller_Action
         var_dump($request);
 
         $this->view->entries = $peopleMapper->find($request, $people);
-
-
-        //$id = $request->getParam('id');
-        //$id = $request->_getParam('id');
-
         
+        //$id = $request->getParam('id');
+        //$id = $request->_getParam('id');  
     }
 }
 
