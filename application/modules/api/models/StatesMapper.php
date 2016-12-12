@@ -46,41 +46,27 @@ class API_Model_StatesMapper
         }
     }
 
-    public function getStates($id=0)
+    public function find($id, API_Model_States $states)
     {
-        $requestURI = parse_url($_SERVER['REQUEST_URI']);
-        $segments = explode('/', $requestURI['path']);
-        $apiVars = [];
-
-        $i = 2;
-        while($i < count($segments)) 
-        {    
-            if($segments[$i+1])
-            {  
-                $apiVars[$segments[$i]] = $segments[$i+1];  
-                $i += 2;    
-            }
-            else 
-            {  
-                $apiVars[$segments[$i]] = null;  
-                $i++;    
-            }
-        }
-
-        header('Content-Type: application/json');
-
-        /*
         $result = $this->getDbTable()->find($id);
         if(0 == count($result))
         {
+            echo "invalid get request";
             return;
         }
         $row = $result->current();
         $states->setId($row->id)
-                ->setStateName($row->firstname)
-                ->setLastName($row->lastname)
-                ->setFavoriteFood($row->food);
-        */
+                ->setStateAbb($row->stateabb)
+                ->setStateName($row->statename);
+
+        $resultArray[] = 
+        [
+            'id'        => $states->id,
+            'stateabb'  => $states->stateabb,
+            'statename' => $states->statename
+        ];
+
+        echo json_encode($resultArray, JSON_PRETTY_PRINT);
     }
 
     public function fetchAll()

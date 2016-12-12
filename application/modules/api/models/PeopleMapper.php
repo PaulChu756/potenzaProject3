@@ -63,12 +63,12 @@ class API_Model_PeopleMapper
                 ->setFavoriteFood($row->food);
 
         $resultArray[] = 
-            [
-                'id'        => $people->id,
-                'firstname' => $people->firstname,
-                'lastname'  => $people->lastname,
-                'food'      => $people->favoritefood
-            ];
+        [
+            'id'        => $people->id,
+            'firstname' => $people->firstname,
+            'lastname'  => $people->lastname,
+            'food'      => $people->favoritefood
+        ];
 
         echo json_encode($resultArray, JSON_PRETTY_PRINT);
     }

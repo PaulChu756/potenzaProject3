@@ -11,10 +11,10 @@ class API_PeopleController extends Zend_Controller_Action
     public function indexAction()
     {
         // action body
-        $people = new API_Model_PeopleMapper();
-        $entry = new API_Model_People();
-        //$this->view->entries = $people->fetchAll();
-        $this->view->entries = $people->find(5, $entry);
+        $peopleMapper = new API_Model_PeopleMapper();
+        $people = new API_Model_People();
+        $this->view->entries = $peopleMapper->fetchAll();
+        $this->view->entries = $peopleMapper->find(4, $people);
     }
 }
 

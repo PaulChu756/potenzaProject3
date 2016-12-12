@@ -47,33 +47,12 @@ class API_Model_VisitsMapper
         }
     }
 
-    public function getVisits($id=0)
+    public function find($id, API_Model_Visits $visits)
     {
-        $requestURI = parse_url($_SERVER['REQUEST_URI']);
-        $segments = explode('/', $requestURI['path']);
-        $apiVars = [];
-
-        $i = 2;
-        while($i < count($segments)) 
-        {    
-            if($segments[$i+1])
-            {  
-                $apiVars[$segments[$i]] = $segments[$i+1];  
-                $i += 2;    
-            }
-            else 
-            {  
-                $apiVars[$segments[$i]] = null;  
-                $i++;    
-            }
-        }
-
-        header('Content-Type: application/json');
-
-        /*
         $result = $this->getDbTable()->find($id);
         if(0 == count($result))
         {
+            echo "invalid get request";
             return;
         }
         $row = $result->current();
@@ -81,7 +60,16 @@ class API_Model_VisitsMapper
                 ->setP_Id($row->p_id)
                 ->setS_Id($row->s_id)
                 ->setDate_Visited($row->date_visited);
-        */
+
+        $resultArray[] = 
+        [
+            'id'            => $visits->id,
+            'p_id'          => $visits->p_id,
+            's_id'          => $visits->s_id,
+            'date_visited'  => $visits->date_visited
+        ];
+
+        echo json_encode($resultArray, JSON_PRETTY_PRINT);
     }
 
     public function fetchAll()

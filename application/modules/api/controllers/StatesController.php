@@ -11,8 +11,10 @@ class API_StatesController extends Zend_Controller_Action
     public function indexAction()
     {
         // action body
-        $states = new API_Model_StatesMapper();
-        $this->view->entries = $states->fetchAll();
+        $statesMapper = new API_Model_StatesMapper();
+        $states = new API_Model_States();
+        $this->view->entries = $statesMapper->fetchAll();
+        $this->view->entries = $statesMapper->find(5, $states);
     }
 }
 
