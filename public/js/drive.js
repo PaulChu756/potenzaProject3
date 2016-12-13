@@ -21,25 +21,25 @@ function displayData()
 	$("#SelectHumanDropDown").change(function(){
 		$.ajax({
 			type: "GET",
-			url: "API/visits",
+			url: "api/visits",
 			dataType: "json",
 			success: function(data)
 			{
 				var i = $("#SelectHumanDropDown").val();
 				$("#displayInfo").empty();
-				
+
 				var firstName = data[i]["firstname"];
 				var lastName = data[i]["lastname"];
 				var food = data[i]["food"];
 				var stateAbb = data[i]["stateabb"];
 				var stateName = data[i]["statename"];
-				var dateVisit = data[i]["date_visited"]; 
+				var dateVisit = data[i]["date_visited"];
 
 				$("#displayInfo").append(
-				"First name: " + firstName + 
-				"<br> Last name: " + lastName + 
+				"First name: " + firstName +
+				"<br> Last name: " + lastName +
 				"<br> Favorite food: " + food +
-				"<br> Visited : " + stateAbb + " " + stateName + 
+				"<br> Visited : " + stateAbb + " " + stateName +
 				"<br> on " + dateVisit);
 			}
 		});
@@ -51,7 +51,7 @@ function populatePeople()
 {
 	$.ajax({
 		type:"GET",
-		url:"API/people",
+		url:"api/people",
 		dataType:"json",
 		success : function(data)
 		{
@@ -81,7 +81,7 @@ function populateStates()
 {
 	$.ajax({
 		type:"GET",
-		url:"API/states",
+		url:"api/states",
 		dataType:"json",
 		success : function(data)
 		{
@@ -109,29 +109,18 @@ function addPerson()
 {
 	$.ajax({
 		type: "POST",
-		url: "API/people", // API/people
+		url: "api/people",
 		data: $("#personForm").serialize(),
-		 success: function(data,status,xhr) 
+		dataType: "json",
+		 success: function(data)
 		{
 			console.log(data);
-			console.log(status);
-			console.log(xhr);
 			console.log($("#personForm").serialize());
-			console.log("You have added a person");
-			populatePeople();
-			displayData();
-		},
-		 error: function(data,status,xhr) 
-		{
-			console.log(data);
-			console.log(status);
-			console.log(xhr);
-			console.log($("#personForm").serialize());
-			console.log("error");
+			alert("You have added a person");
 			populatePeople();
 			displayData();
 		}
-	});	
+	});
 }
 
 //Add visit to database
@@ -139,18 +128,16 @@ function addVisit()
 {
 	$.ajax({
 		type: "POST",
-		url: "API/visits", // API/visits
-		data: $("#humanNameDropDown, #stateNameDropDown, #visitForm").serialize(),
+		url: "api/visits",
+		data: $("#visitForm").serialize(),
+		dataType: "json",
 		success: function(data)
 		{
 			console.log(data);
 			console.log($("#visitForm").serialize());
-			console.log("You have added a visit");
-		},
-		error: function(data)
-		{
-			console.log(data);
-			console.log($("#visitForm").serialize());
+			alert("You have added a visit");
+			populatePeople();
+			displayData();
 		}
 	});
 }
