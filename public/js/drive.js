@@ -67,8 +67,8 @@ function displayPeopleData()
 function displayStatesData()
 {
 	$("#SelectHumanDropDown").change(function(){
-		//var i = $("#SelectHumanDropDown").val();
-		//var selectedPerson = i;
+		var i = $("#SelectHumanDropDown").val();
+		var selectedPerson = i;
 		$.ajax({
 			type: "GET",
 			url: "api/states/" + selectedPerson,
@@ -171,20 +171,17 @@ function addPerson()
 		type: "POST",
 		url: "api/people",
 		data: $("#personForm").serialize(),
-		dataType: "json",
 		success: function(data)
 		{
 			console.log(data);
 			console.log($("#personForm").serialize());
 			alert("You have added a person");
-			populatePeople();
-			displayData();
+			zendPopulatePeople();
+			displayPeopleData();
 		},
-		error:function(data, status, xhr)
+		error:function(data)
 		{
 			console.log(data);
-			console.log(status);
-			console.log(xhr);
 			console.log($("#personForm").serialize());
 		}
 	});
@@ -197,14 +194,11 @@ function addVisit()
 		type: "POST",
 		url: "api/visits",
 		data: $("#visitForm").serialize(),
-		dataType: "json",
 		success: function(data)
 		{
 			console.log(data);
 			console.log($("#visitForm").serialize());
 			alert("You have added a visit");
-			//populatePeople();
-			//displayData();
 		}
 	});
 }
