@@ -6,12 +6,32 @@ $(document).ready(function(){
 
 	$('#addPersonSubmit').click(function(e){
 		e.preventDefault();
-		addPerson();
+		var checkFirstName = $.trim($('#firstName').val());
+		var checkLastName = $.trim($('#lastName').val());
+		var checkFavoriteFood = $.trim($('#favoriteFood').val());
+		if(checkFirstName === '' || checkLastName === '' || checkFavoriteFood === '')
+		{
+			alert("Please fill out all input fields");
+		}
+		else
+		{
+			addPerson();
+		}
 	});
 
 	$('#addVisitSubmit').click(function(e){
 		e.preventDefault();
-		addVisit();
+		var checkName = $.trim($('#humanNameDropDown').val());
+		var checkState = $.trim($('#stateNameDropDown').val());
+		var checkVisit = $.trim($('#dateVisit').val());
+		if(checkVisit === '')
+		{
+			alert("Please fill out all input fields");
+		}
+		else
+		{
+			addVisit();
+		}
 	});
 });
 
@@ -25,24 +45,59 @@ function displayData()
 			dataType: "json",
 			success: function(data)
 			{
+				var dataLength = data.length;
 				var i = $("#SelectHumanDropDown").val();
 				$("#displayInfo").empty();
 
-				var firstName = data[i]["firstname"];
-				var lastName = data[i]["lastname"];
-				var food = data[i]["food"];
-				var stateAbb = data[i]["stateabb"];
-				var stateName = data[i]["statename"];
-				var dateVisit = data[i]["date_visited"];
+				if(data[i] === undefined)
+				{
+					alert ("You need to add a visit");
+				}
+				else
+				{
+					var firstName = data[i]["firstname"];
+					var lastName = data[i]["lastname"];
+					var food = data[i]["food"];
+					var stateName = data[i]["statename"];
+					var dateVisit = data[i]["date_visited"];
 
-				$("#displayInfo").append(
-				"First name: " + firstName +
-				"<br> Last name: " + lastName +
-				"<br> Favorite food: " + food +
-				"<br> Visited : " + stateAbb + " " + stateName +
-				"<br> on " + dateVisit);
+					$("#displayInfo").append(
+					"First name: " + firstName +
+					"<br> Last name: " + lastName +
+					"<br> Favorite food: " + food +
+					"<br> Visited the State : " + stateName + " on " + dateVisit);
+				}
 			}
 		});
+	});
+}
+
+//populate zendPeople's dropdowns
+function zendPopulatePeople()
+{
+	$.ajax({
+		type:"GET",
+		url:"api/people",
+		dataType:"json",
+		success : function(data)
+		{
+			//console.log(data);
+			$("#SelectHumanDropDown").empty();
+			$("#humanNameDropDown").empty();
+			var len = data.length;
+			for(var i = 0; i < len; i++)
+			{
+				var id = data[i]["id"];
+				var firstname = data[i]["firstname"];
+				$("#SelectHumanDropDown").append("<option value='" + id + "'>" + firstname + "</option>");
+				$("#humanNameDropDown").append("<option value='" + id + "'>" + firstname + "</option>");
+			}
+		},
+		error : function(data)
+		{
+			console.log('failed');
+			console.log(data);
+		}
 	});
 }
 
@@ -55,10 +110,9 @@ function populatePeople()
 		dataType:"json",
 		success : function(data)
 		{
-			//console.log('success');
-			//console.log(data);
-			$("#SelectHumanDropDown").empty();
-			$("#humanNameDropDown").empty();
+			$("#SelectHumanDropDown option").not("#personOptions").remove();
+			$("#humanNameDropDown option").not("#personOptions").remove();
+
 			var len = data.length;
 			for(var i = 0; i < len; i++)
 			{
@@ -85,9 +139,6 @@ function populateStates()
 		dataType:"json",
 		success : function(data)
 		{
-			//console.log('success');
-			//console.log(data);
-			$("#stateNameDropDown").empty();
 			var len = data.length;
 			for(var i = 0; i < len; i++)
 			{
@@ -95,11 +146,6 @@ function populateStates()
 				var stateName = data[i]["statename"];
 				$("#stateNameDropDown").append("<option value='" + id + "'>" + stateName + "</option>");
 			}
-		},
-		error : function(data)
-		{
-			console.log('failed');
-			console.log(data);
 		}
 	});
 }
@@ -136,8 +182,8 @@ function addVisit()
 			console.log(data);
 			console.log($("#visitForm").serialize());
 			alert("You have added a visit");
-			populatePeople();
-			displayData();
+			//populatePeople();
+			//displayData();
 		}
 	});
 }
