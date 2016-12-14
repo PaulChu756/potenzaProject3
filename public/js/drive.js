@@ -1,8 +1,12 @@
 // populate people/states, also person/visit form submit
 $(document).ready(function(){
-	populatePeople();
-	populateStates();
-	displayData();
+	//populatePeople();
+	//populateStates();
+	//displayData();
+
+	zendPopulatePeople();
+	zendPopulateStates();
+	zendDisplayData();
 
 	$('#addPersonSubmit').click(function(e){
 		e.preventDefault();
@@ -35,6 +39,67 @@ $(document).ready(function(){
 	});
 });
 
+function zendDisplayData()
+{
+	$("#SelectHumanDropDown").change(function(){
+		$.ajax({
+			type: "GET",
+			url: "api/visits",
+			dataType: "json",
+			success: function(data)
+			{
+				$.each(data, function(i, item)
+				{
+
+				});
+			}
+		});
+	});
+}
+
+//populate zendPeople's dropdowns
+function zendPopulatePeople()
+{
+	$.ajax({
+		type:"GET",
+		url:"api/people",
+		dataType:"json",
+		success : function(data)
+		{
+			$("#SelectHumanDropDown option").not("#personOptions").remove();
+			$("#humanNameDropDown option").not("#personOptions").remove();
+
+			$.each(data, function(i,item)
+			{
+				$("#SelectHumanDropDown").append("<option value='" + data[i].id + "'>" + data[i].firstname + "</option>");
+				$("#humanNameDropDown").append("<option value='" + data[i].id + "'>" + data[i].firstname + "</option>");
+			});
+		},
+		error : function(data)
+		{
+			console.log('failed');
+			console.log(data);
+		}
+	});
+}
+
+//populate zendState's dropdown
+function zendPopulateStates()
+{
+	$.ajax({
+		type:"GET",
+		url:"api/states",
+		dataType:"json",
+		success : function(data)
+		{
+			$.each(data, function(i,item)
+			{
+				$("#stateNameDropDown").append("<option value='" + data[i].id + "'>" + data[i].statename + "</option>");
+			});
+		}
+	});
+}
+
 //display selected person
 function displayData()
 {
@@ -49,7 +114,7 @@ function displayData()
 				var i = $("#SelectHumanDropDown").val();
 				$("#displayInfo").empty();
 
-				if(data[i] === undefined)
+				if(data.length === undefined)
 				{
 					alert ("You need to add a visit");
 				}
@@ -69,35 +134,6 @@ function displayData()
 				}
 			}
 		});
-	});
-}
-
-//populate zendPeople's dropdowns
-function zendPopulatePeople()
-{
-	$.ajax({
-		type:"GET",
-		url:"api/people",
-		dataType:"json",
-		success : function(data)
-		{
-			//console.log(data);
-			$("#SelectHumanDropDown").empty();
-			$("#humanNameDropDown").empty();
-			var len = data.length;
-			for(var i = 0; i < len; i++)
-			{
-				var id = data[i]["id"];
-				var firstname = data[i]["firstname"];
-				$("#SelectHumanDropDown").append("<option value='" + id + "'>" + firstname + "</option>");
-				$("#humanNameDropDown").append("<option value='" + id + "'>" + firstname + "</option>");
-			}
-		},
-		error : function(data)
-		{
-			console.log('failed');
-			console.log(data);
-		}
 	});
 }
 
