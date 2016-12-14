@@ -27,7 +27,7 @@ class API_Model_People
     public function __get($name)
     {
         $method = 'get' . $name;
-        
+
         if(('mapper' == $name) || !method_exists($this, $method))
         {
             throw new Exception('Invalid get people proptery');

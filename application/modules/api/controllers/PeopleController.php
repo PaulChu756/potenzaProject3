@@ -4,8 +4,17 @@ class API_PeopleController extends Zend_Controller_Action
 {
   public function indexAction()
   {
-      $peopleMapper = new API_Model_PeopleMapper();
-      $this->view->entries = $peopleMapper->fetchAll();
+      $request = $this->getRequest();
+
+      if($this->getRequest()->isGet())
+      {
+        $peopleMapper = new API_Model_PeopleMapper();
+        $this->view->entries = $peopleMapper->fetchAll();
+      }
+      else
+      {
+        $peoplePost = new API_Model_People();
+      }
   }
 
   public function getAction()

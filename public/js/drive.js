@@ -2,7 +2,9 @@
 $(document).ready(function(){
 	zendPopulatePeople();
 	zendPopulateStates();
-	zendDisplayData();
+	displayPeopleData();
+	displayStatesData();
+	displayVisitsData();
 
 	$('#addPersonSubmit').click(function(e){
 		e.preventDefault();
@@ -24,7 +26,7 @@ $(document).ready(function(){
 		var checkName = $.trim($('#humanNameDropDown').val());
 		var checkState = $.trim($('#stateNameDropDown').val());
 		var checkVisit = $.trim($('#dateVisit').val());
-		if(checkVisit === '')
+		if(checkName == '' || checkState == '' || checkVisit == '')
 		{
 			alert("Please fill out all input fields");
 		}
@@ -35,9 +37,9 @@ $(document).ready(function(){
 	});
 });
 
-function zendDisplayData()
+// display People Data
+function displayPeopleData()
 {
-	// people display info
 	$("#SelectHumanDropDown").change(function(){
 		var i = $("#SelectHumanDropDown").val();
 		var selectedPerson = i;
@@ -58,7 +60,15 @@ function zendDisplayData()
 				"<br> Favorite food: " + food);
 			}
 		});
-		// state display info
+	});
+}
+
+//display States Data
+function displayStatesData()
+{
+	$("#SelectHumanDropDown").change(function(){
+		var i = $("#SelectHumanDropDown").val();
+		var selectedPerson = i;
 		$.ajax({
 			type: "GET",
 			url: "api/states/" + selectedPerson,
@@ -79,7 +89,15 @@ function zendDisplayData()
 				});
 			}
 		});
-		//display Visit info
+	});
+}
+
+//display Visits Data
+function displayVisitsData()
+{
+	$("#SelectHumanDropDown").change(function(){
+		var i = $("#SelectHumanDropDown").val();
+		var selectedPerson = i;
 		$.ajax({
 			type: "GET",
 			url: "api/visits/" + selectedPerson,
