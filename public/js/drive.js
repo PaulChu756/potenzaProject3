@@ -67,8 +67,8 @@ function displayPeopleData()
 function displayStatesData()
 {
 	$("#SelectHumanDropDown").change(function(){
-		var i = $("#SelectHumanDropDown").val();
-		var selectedPerson = i;
+		//var i = $("#SelectHumanDropDown").val();
+		//var selectedPerson = i;
 		$.ajax({
 			type: "GET",
 			url: "api/states/" + selectedPerson,
