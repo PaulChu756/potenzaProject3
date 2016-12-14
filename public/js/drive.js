@@ -39,17 +39,18 @@ function zendDisplayData()
 {
 	// people display info
 	$("#SelectHumanDropDown").change(function(){
+		var i = $("#SelectHumanDropDown").val();
+		var selectedPerson = i;
 		$.ajax({
 			type: "GET",
-			url: "api/people",
+			url: "api/people/" + selectedPerson,
 			dataType: "json",
 			success: function(data)
 			{
 				$("#PeopleInfo").empty();
-				var i = $("#SelectHumanDropDown").val();
-				var firstName = data[i-1]["firstname"];
-				var lastName = data[i-1]["lastname"];
-				var food = data[i-1]["food"];
+				var firstName = data[0]["firstname"];
+				var lastName = data[0]["lastname"];
+				var food = data[0]["food"];
 
 				$("#PeopleInfo").append(
 				"First name: " + firstName +
@@ -60,48 +61,43 @@ function zendDisplayData()
 		// state display info
 		$.ajax({
 			type: "GET",
-			url: "api/states",
+			url: "api/states/" + selectedPerson,
 			dataType: "json",
 			success: function(data)
 			{
 				$("#StatesInfo").empty();
-				var i = $("#SelectHumanDropDown").val();
-				var stateName = data[i-1]["statename"];
 
-				if(stateName == undefined)
+				if(data == undefined)
 				{
 					alert("You need to add a visit");
 				}
-				else
-				{
-					// does not display correctly
-					$("#StatesInfo").append(
-						"Visited the State : " + stateName);
-				}
 
+				$.each(data, function(i, item)
+				{
+					var stateName = data[i]["statename"];
+					$("#StatesInfo").append("Visited the State : " + stateName);
+				});
 			}
 		});
 		//display Visit info
 		$.ajax({
 			type: "GET",
-			url: "api/visits",
+			url: "api/visits/" + selectedPerson,
 			dataType: "json",
 			success: function(data)
 			{
 				$("#VisitsInfo").empty();
-				var i = $("#SelectHumanDropDown").val();
-				var dateVisit = data[i-1]["date_visited"];
 
-				if(dateVisit === undefined)
+				if(data == undefined)
 				{
 					alert("You need to add a visit");
 				}
-				else
+
+				$.each(data, function(i, item)
 				{
-					// Does not display correctly
-					$("#VisitsInfo").append(
-						" on " + dateVisit);
-				}
+					var dateVisit = data[i]["date_visited"];
+					$("#VisitsInfo").append(" on " + dateVisit);
+				});
 			}
 		});
 	});
