@@ -41,17 +41,71 @@ $(document).ready(function(){
 
 function zendDisplayData()
 {
+	// people display info
 	$("#SelectHumanDropDown").change(function(){
+		$.ajax({
+			type: "GET",
+			url: "api/people",
+			dataType: "json",
+			success: function(data)
+			{
+				$("#PeopleInfo").empty();
+				var i = $("#SelectHumanDropDown").val();
+				var firstName = data[i-1]["firstname"];
+				var lastName = data[i-1]["lastname"];
+				var food = data[i-1]["food"];
+
+				$("#PeopleInfo").append(
+				"First name: " + firstName +
+				"<br> Last name: " + lastName +
+				"<br> Favorite food: " + food);
+			}
+		});
+		// state display info
+		$.ajax({
+			type: "GET",
+			url: "api/states",
+			dataType: "json",
+			success: function(data)
+			{
+				$("#StatesInfo").empty();
+				var i = $("#SelectHumanDropDown").val();
+				var stateName = data[i-1]["statename"];
+
+				if(stateName == undefined)
+				{
+					alert("You need to add a visit");
+				}
+				else
+				{
+					// does not display correctly
+					$("#StatesInfo").append(
+						"Visited the State : " + stateName);
+				}
+
+			}
+		});
+		//display Visit info
 		$.ajax({
 			type: "GET",
 			url: "api/visits",
 			dataType: "json",
 			success: function(data)
 			{
-				$.each(data, function(i, item)
-				{
+				$("#VisitsInfo").empty();
+				var i = $("#SelectHumanDropDown").val();
+				var dateVisit = data[i-1]["date_visited"];
 
-				});
+				if(dateVisit === undefined)
+				{
+					alert("You need to add a visit");
+				}
+				else
+				{
+					// Does not display correctly
+					$("#VisitsInfo").append(
+						" on " + dateVisit);
+				}
 			}
 		});
 	});
@@ -114,7 +168,7 @@ function displayData()
 				var i = $("#SelectHumanDropDown").val();
 				$("#displayInfo").empty();
 
-				if(data.length === undefined)
+				if(dataLength === undefined)
 				{
 					alert ("You need to add a visit");
 				}
