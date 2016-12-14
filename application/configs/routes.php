@@ -55,7 +55,7 @@ $stateRoute = new Zend_Controller_Router_Route(
         'action'        => 'get'
     )
 );
-$router->addRoute('id', $stateRoute);
+$router->addRoute('statesId', $stateRoute);
 
 
 //get all visits
