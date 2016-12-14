@@ -172,13 +172,20 @@ function addPerson()
 		url: "api/people",
 		data: $("#personForm").serialize(),
 		dataType: "json",
-		 success: function(data)
+		success: function(data)
 		{
 			console.log(data);
 			console.log($("#personForm").serialize());
 			alert("You have added a person");
 			populatePeople();
 			displayData();
+		},
+		error:function(data, status, xhr)
+		{
+			console.log(data);
+			console.log(status);
+			console.log(xhr);
+			console.log($("#personForm").serialize());
 		}
 	});
 }

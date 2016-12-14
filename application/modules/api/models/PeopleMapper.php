@@ -4,7 +4,7 @@ class API_Model_PeopleMapper
 {
 
     protected $_dbTable;
-    
+
     public function setDbTable($dbTable)
     {
         if(is_string($dbTable))
@@ -18,7 +18,7 @@ class API_Model_PeopleMapper
         $this->_dbTable = $dbTable;
         return $this;
     }
-    
+
     public function getDbTable()
     {
         if( null === $this->_dbTable)
@@ -62,7 +62,7 @@ class API_Model_PeopleMapper
                 ->setLastName($row->lastname)
                 ->setFavoriteFood($row->food);
 
-        $resultArray[] = 
+        $resultArray[] =
         [
             'id'        => $people->id,
             'firstname' => $people->firstname,
@@ -89,7 +89,7 @@ class API_Model_PeopleMapper
 
         foreach($entries as $entryObj)
         {
-            $resultArray[] = 
+            $resultArray[] =
             [
                 'id'        => $entryObj->id,
                 'firstname' => $entryObj->firstname,

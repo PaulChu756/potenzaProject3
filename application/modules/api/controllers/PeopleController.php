@@ -4,16 +4,21 @@ class API_PeopleController extends Zend_Controller_Action
 {
   public function indexAction()
   {
-      $request = $this->getRequest();
-
       if($this->getRequest()->isGet())
       {
         $peopleMapper = new API_Model_PeopleMapper();
         $this->view->entries = $peopleMapper->fetchAll();
       }
-      else
+      else if($this->getRequest()->isPost())
       {
-        $peoplePost = new API_Model_People();
+          $request = $this->getRequest();
+          $getPeopleValues = $request->getPost();
+          $people = new API_Model_People();
+          $people   ->setFirstName($getPeopleValues['firstName'])
+                    ->setLastName($getPeopleValues['lastName'])
+                    ->setFavoriteFood($getPeopleValues['favoriteFood']);
+          $peopleMapper = new API_Model_PeopleMapper();
+          $peopleMapper->save($people);
       }
   }
 

@@ -36,7 +36,9 @@
               <actionMethod actionName="index"/>
             </controllerFile>
           </controllersDirectory>
-          <formsDirectory enabled="false"/>
+          <formsDirectory>
+            <formFile formName="People"/>
+          </formsDirectory>
           <layoutsDirectory enabled="false">
             <layoutScriptsDirectory enabled="false"/>
           </layoutsDirectory>
