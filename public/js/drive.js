@@ -8,32 +8,12 @@ $(document).ready(function(){
 
 	$('#addPersonSubmit').click(function(e){
 		e.preventDefault();
-		var checkFirstName = $.trim($('#firstName').val());
-		var checkLastName = $.trim($('#lastName').val());
-		var checkFavoriteFood = $.trim($('#favoriteFood').val());
-		if(checkFirstName === '' || checkLastName === '' || checkFavoriteFood === '')
-		{
-			alert("Please fill out all input fields");
-		}
-		else
-		{
 			addPerson();
-		}
 	});
 
 	$('#addVisitSubmit').click(function(e){
 		e.preventDefault();
-		var checkName = $.trim($('#humanNameDropDown').val());
-		var checkState = $.trim($('#stateNameDropDown').val());
-		var checkVisit = $.trim($('#dateVisit').val());
-		if(checkName == '' || checkState == '' || checkVisit == '')
-		{
-			alert("Please fill out all input fields");
-		}
-		else
-		{
 			addVisit();
-		}
 	});
 });
 
@@ -41,8 +21,7 @@ $(document).ready(function(){
 function displayPeopleData()
 {
 	$("#SelectHumanDropDown").change(function(){
-		var i = $("#SelectHumanDropDown").val();
-		var selectedPerson = i;
+		var selectedPerson = $("#SelectHumanDropDown").val();
 		$.ajax({
 			type: "GET",
 			url: "api/people/" + selectedPerson,
@@ -67,26 +46,28 @@ function displayPeopleData()
 function displayStatesData()
 {
 	$("#SelectHumanDropDown").change(function(){
-		var i = $("#SelectHumanDropDown").val();
-		var selectedPerson = i;
+		var selectedPerson = $("#SelectHumanDropDown").val();
 		$.ajax({
 			type: "GET",
 			url: "api/states/" + selectedPerson,
 			dataType: "json",
 			success: function(data)
 			{
+				var dataLength = data.length;
 				$("#StatesInfo").empty();
 
-				if(data == undefined)
+				if(dataLength > 0)
+				{
+					$.each(data, function(e, item)
+					{
+						var stateName = data[e]["statename"];
+						$("#StatesInfo").append("Visited the State : " + stateName);
+					});
+				}
+				else
 				{
 					alert("You need to add a visit");
 				}
-
-				$.each(data, function(i, item)
-				{
-					var stateName = data[i]["statename"];
-					$("#StatesInfo").append("Visited the State : " + stateName);
-				});
 			}
 		});
 	});
@@ -173,14 +154,15 @@ function addPerson()
 		data: $("#personForm").serialize(),
 		success: function(data)
 		{
+			alert("You have added a person");
 			console.log(data);
 			console.log($("#personForm").serialize());
-			alert("You have added a person");
 			zendPopulatePeople();
 			displayPeopleData();
 		},
 		error:function(data)
 		{
+			alert("Please fill out all inputs");
 			console.log(data);
 			console.log($("#personForm").serialize());
 		}
@@ -196,12 +178,13 @@ function addVisit()
 		data: $("#visitForm").serialize(),
 		success: function(data)
 		{
+			alert("You have added a visit");
 			console.log(data);
 			console.log($("#visitForm").serialize());
-			alert("You have added a visit");
 		},
 		error: function(data)
 		{
+			alert("Please fill out all inputs");
 			console.log(data);
 			console.log($("#visitForm").serialize());
 		}

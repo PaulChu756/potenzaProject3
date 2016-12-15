@@ -20,10 +20,6 @@ class API_VisitsController extends Zend_Controller_Action
       $visitsMapper = new API_Model_VisitsMapper();
       $visitsMapper->save($visits);
     }
-    else
-    {
-      //echo "Error: "; die();
-    }
   }
 
   public function getAction()

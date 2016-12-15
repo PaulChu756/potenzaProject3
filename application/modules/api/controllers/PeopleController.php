@@ -14,16 +14,22 @@ class API_PeopleController extends Zend_Controller_Action
           $request = $this->getRequest();
           $getPeopleValues = $request->getPost();
           $people = new API_Model_People();
-          $people   ->setFirstName($getPeopleValues['firstName'])
-                    ->setLastName($getPeopleValues['lastName'])
-                    ->setFavoriteFood($getPeopleValues['favoriteFood']);
+
+          $firstName = $getPeopleValues['firstName'];
+          $lastName = $getPeopleValues['lastName'];
+          $favFood = $getPeopleValues['favoriteFood'];
+
+          if(empty($firstName) || empty($lastName) || empty($favFood))
+          {
+            throw new Exception("Please fill out all inputs", 1);
+          }
+
+          $people   ->setFirstName($firstName)
+                    ->setLastName($lastName)
+                    ->setFavoriteFood($favFood);
           $peopleMapper = new API_Model_PeopleMapper();
           $peopleMapper->save($people);
       }
-    else
-    {
-      //echo "Error: "; die();
-    }
   }
 
   public function getAction()
