@@ -2,7 +2,6 @@
 
 class API_Model_PeopleMapper
 {
-
     protected $_dbTable;
 
     public function setDbTable($dbTable)

@@ -34,8 +34,7 @@ function displayData()
 				var stateName = data[0]["statename"];
 				var dateVisit = data[0]["date_visited"];
 
-				var dataLength = data.length;
-				if(dataLength == undefined || dataLength == null || dataLength == 0)
+				if(firstName === null || lastName === null || food === null || stateName === null || dateVisit === null)
 				{
 					alert("You need to add a visit");
 				}
@@ -44,16 +43,19 @@ function displayData()
 					$("#PeopleInfo").append(
 					"First name: " + firstName +
 					"<br> Last name: " + lastName +
-					"<br> Favorite food: " + food);
-
-					$.each(data, function(i, item)
-					{
-						$("#StatesInfo").empty();
-						var stateName = data[0]["statename"];
-						var dateVisit = data[0]["date_visited"];
-						$("#StatesInfo").append("Visited the State : " + stateName + " on " + dateVisit + " ");
-					});
+					"<br> Favorite food: " + food +
+					"<br> Visited the State : " + stateName + " on " + dateVisit);
 				}
+
+				/*
+				$.each(data, function(i, item)
+				{
+					$("#StatesInfo").empty();
+					var stateName = data[0]["statename"];
+					var dateVisit = data[0]["date_visited"];
+					$("#StatesInfo").append("Visited the State : " + stateName + " on " + dateVisit + " ");
+				});
+				*/
 			}
 		});
 	});
