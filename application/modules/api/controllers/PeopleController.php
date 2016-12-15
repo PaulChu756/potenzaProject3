@@ -38,7 +38,7 @@ class API_PeopleController extends Zend_Controller_Action
       $peopleMapper = new API_Model_PeopleMapper();
       $request = $this->getRequest();
       $id = $request->getParam('peopleId');
-      $this->view->entries = $peopleMapper->find($id, $people);
+      $this->view->entries = $peopleMapper->getPeopleVisits($id);
   }
 }
 

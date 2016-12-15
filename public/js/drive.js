@@ -2,9 +2,7 @@
 $(document).ready(function(){
 	zendPopulatePeople();
 	zendPopulateStates();
-	displayPeopleData();
-	displayStatesData();
-	displayVisitsData();
+	displayData();
 
 	$('#addPersonSubmit').click(function(e){
 		e.preventDefault();
@@ -18,7 +16,7 @@ $(document).ready(function(){
 });
 
 // display People Data
-function displayPeopleData()
+function displayData()
 {
 	$("#SelectHumanDropDown").change(function(){
 		var selectedPerson = $("#SelectHumanDropDown").val();
@@ -28,77 +26,33 @@ function displayPeopleData()
 			dataType: "json",
 			success: function(data)
 			{
+				console.log(data);
 				$("#PeopleInfo").empty();
 				var firstName = data[0]["firstname"];
 				var lastName = data[0]["lastname"];
 				var food = data[0]["food"];
+				var stateName = data[0]["statename"];
+				var dateVisit = data[0]["date_visited"];
 
-				$("#PeopleInfo").append(
-				"First name: " + firstName +
-				"<br> Last name: " + lastName +
-				"<br> Favorite food: " + food);
-			}
-		});
-	});
-}
-
-//display States Data
-function displayStatesData()
-{
-	$("#SelectHumanDropDown").change(function(){
-		var selectedPerson = $("#SelectHumanDropDown").val();
-		$.ajax({
-			type: "GET",
-			url: "api/states/" + selectedPerson,
-			dataType: "json",
-			success: function(data)
-			{
-				$("#StatesInfo").empty();
 				var dataLength = data.length;
-
-				if(dataLength > 0)
-				{
-					$.each(data, function(i, item)
-					{
-						var stateName = data[i]["statename"];
-						$("#StatesInfo").append("Visited the State : " + stateName + "<br>");
-					});
-				}
-				else
+				if(dataLength == undefined || dataLength == null || dataLength == 0)
 				{
 					alert("You need to add a visit");
 				}
-			}
-		});
-	});
-}
-
-//display Visits Data
-function displayVisitsData()
-{
-	$("#SelectHumanDropDown").change(function(){
-		var selectedPerson = $("#SelectHumanDropDown").val();
-		$.ajax({
-			type: "GET",
-			url: "api/visits/" + selectedPerson,
-			dataType: "json",
-			success: function(data)
-			{
-				$("#VisitsInfo").empty();
-				var dataLength = data.length;
-
-				if(dataLength > 0)
-				{
-					$.each(data, function(i, item)
-					{
-						console.log(data[i]);
-						var dateVisit = data[i]["date_visited"];
-						$("#VisitsInfo").append(" on " + dateVisit);
-					});
-				}
 				else
 				{
-					alert("You need to add a visit");
+					$("#PeopleInfo").append(
+					"First name: " + firstName +
+					"<br> Last name: " + lastName +
+					"<br> Favorite food: " + food);
+
+					$.each(data, function(i, item)
+					{
+						$("#StatesInfo").empty();
+						var stateName = data[0]["statename"];
+						var dateVisit = data[0]["date_visited"];
+						$("#StatesInfo").append("Visited the State : " + stateName + " on " + dateVisit + " ");
+					});
 				}
 			}
 		});
