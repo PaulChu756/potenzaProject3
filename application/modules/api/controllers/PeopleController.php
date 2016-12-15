@@ -20,6 +20,10 @@ class API_PeopleController extends Zend_Controller_Action
           $peopleMapper = new API_Model_PeopleMapper();
           $peopleMapper->save($people);
       }
+    else
+    {
+      //echo "Error: "; die();
+    }
   }
 
   public function getAction()

@@ -27,7 +27,7 @@ class API_Model_Visits
     public function __get($name)
     {
         $method = 'get' . $name;
-        
+
         if(('mapper' == $name) || !method_exists($this, $method))
         {
             throw new Exception('Invalid get visits proptery');
@@ -89,4 +89,3 @@ class API_Model_Visits
         return $this->_date_visited;
     }
 }
-

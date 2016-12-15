@@ -199,6 +199,11 @@ function addVisit()
 			console.log(data);
 			console.log($("#visitForm").serialize());
 			alert("You have added a visit");
+		},
+		error: function(data)
+		{
+			console.log(data);
+			console.log($("#visitForm").serialize());
 		}
 	});
 }
