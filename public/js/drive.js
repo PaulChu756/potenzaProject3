@@ -53,15 +53,15 @@ function displayStatesData()
 			dataType: "json",
 			success: function(data)
 			{
-				var dataLength = data.length;
 				$("#StatesInfo").empty();
+				var dataLength = data.length;
 
 				if(dataLength > 0)
 				{
-					$.each(data, function(e, item)
+					$.each(data, function(i, item)
 					{
-						var stateName = data[e]["statename"];
-						$("#StatesInfo").append("Visited the State : " + stateName);
+						var stateName = data[i]["statename"];
+						$("#StatesInfo").append("Visited the State : " + stateName + "<br>");
 					});
 				}
 				else
@@ -77,8 +77,7 @@ function displayStatesData()
 function displayVisitsData()
 {
 	$("#SelectHumanDropDown").change(function(){
-		var i = $("#SelectHumanDropDown").val();
-		var selectedPerson = i;
+		var selectedPerson = $("#SelectHumanDropDown").val();
 		$.ajax({
 			type: "GET",
 			url: "api/visits/" + selectedPerson,
@@ -86,17 +85,21 @@ function displayVisitsData()
 			success: function(data)
 			{
 				$("#VisitsInfo").empty();
+				var dataLength = data.length;
 
-				if(data == undefined)
+				if(dataLength > 0)
+				{
+					$.each(data, function(i, item)
+					{
+						console.log(data[i]);
+						var dateVisit = data[i]["date_visited"];
+						$("#VisitsInfo").append(" on " + dateVisit);
+					});
+				}
+				else
 				{
 					alert("You need to add a visit");
 				}
-
-				$.each(data, function(i, item)
-				{
-					var dateVisit = data[i]["date_visited"];
-					$("#VisitsInfo").append(" on " + dateVisit);
-				});
 			}
 		});
 	});
