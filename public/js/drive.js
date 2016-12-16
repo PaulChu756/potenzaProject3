@@ -46,16 +46,6 @@ function displayData()
 					"<br> Favorite food: " + food +
 					"<br> Visited the State : " + stateName + " on " + dateVisit);
 				}
-
-				/*
-				$.each(data, function(i, item)
-				{
-					$("#StatesInfo").empty();
-					var stateName = data[0]["statename"];
-					var dateVisit = data[0]["date_visited"];
-					$("#StatesInfo").append("Visited the State : " + stateName + " on " + dateVisit + " ");
-				});
-				*/
 			}
 		});
 	});

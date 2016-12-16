@@ -1,10 +1,10 @@
 <?php
 
-// just route API to api
+// just route api to api
 $apiRoute = new Zend_Controller_Router_Route(
     'api',
     array(
-        'module'        => 'API',
+        'module'        => 'api',
         'controller'    => 'index',
         'action'        => 'index'
     )

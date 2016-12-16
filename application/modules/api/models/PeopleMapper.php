@@ -55,11 +55,6 @@ class API_Model_PeopleMapper
   		$stateName = $row["statename"];
       $dateVisit = $row["date_visited"];
 
-      while($row = mysqli_fetch_array($query))
-      {
-        $stateName = $row["statename"];
-      }
-
       $resultArray[] =
       [
           'id'            => $id,
