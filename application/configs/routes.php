@@ -4,7 +4,7 @@
 $apiRoute = new Zend_Controller_Router_Route(
     'api',
     array(
-        'module'        => 'api',
+        'module'        => 'API',
         'controller'    => 'index',
         'action'        => 'index'
     )

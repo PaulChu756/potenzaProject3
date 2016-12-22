@@ -71,7 +71,7 @@ function zendPopulatePeople()
 		},
 		error : function(data)
 		{
-			console.log('failed');
+			console.log('Error: to populate people');
 			console.log(data);
 		}
 	});
