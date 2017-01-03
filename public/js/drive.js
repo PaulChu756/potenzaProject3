@@ -30,25 +30,53 @@ function displayData()
 			dataType: "json",
 			success: function(data)
 			{
-				console.log(data);
 				$("#PeopleInfo").empty();
-				var firstName = data[0]["firstname"];
-				var lastName = data[0]["lastname"];
-				var food = data[0]["food"];
-				var stateName = data[0]["statename"];
-				var dateVisit = data[0]["date_visited"];
+				$("#VisitsInfo").empty();
 
-				if(firstName === null || lastName === null || food === null || stateName === null || dateVisit === null)
+				var dataLength = data.length;
+				console.log(data);
+				
+				if(dataLength > 0)
 				{
-					alert("You need to add a visit");
-				}
-				else
-				{
+					var firstName = data[0]["firstname"];
+					var lastName = data[0]["lastname"];
+					var food = data[0]["food"];
+					
 					$("#PeopleInfo").append(
 					"First name: " + firstName +
 					"<br> Last name: " + lastName +
-					"<br> Favorite food: " + food +
-					"<br> Visited the State : " + stateName + " on " + dateVisit);
+					"<br> Favorite food: " + food);
+
+					for(var i = 0; i < dataLength; i++)
+					{
+						var stateName = data[i]["statename"];
+						var dateVisit = data[i]["date_visited"];
+
+						$("#VisitsInfo").append("Visited the State : " + stateName + " on " + dateVisit + "<br>");
+					}
+				}
+				else
+				{
+					$.ajax({
+						type:"GET",
+						url: "api/people/" + selectPerson,
+						dataType: "json",
+						success: function(data)
+						{
+							$("#PeopleInfo").empty();
+							$("#VisitsInfo").empty();
+
+							var firstName = data[0]["firstname"];
+							var lastName = data[0]["lastname"];
+							var food = data[0]["food"];
+
+							$("#displayPeopleInfo").append(
+							"First name: " + firstName +
+							"<br> Last name: " + lastName +
+							"<br> Favorite food: " + food +
+							"<br> has never traveled in their life.");
+						}
+					});
 				}
 			}
 		});

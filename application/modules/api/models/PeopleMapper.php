@@ -29,43 +29,48 @@ class API_Model_PeopleMapper
 
     public function getPeopleVisits($id)
     {
-      $host = "localhost";
-      $user = "root";
-      $password = "root";
-      $database = "myDB";
+        $host = "localhost";
+        $user = "root";
+        $password = "root";
+        $database = "myDB";
 
-      $connection = mysqli_connect($host, $user, $password);
-      if(!$connection){
-      die("Could not connect: " . mysqli_connect_error());}
-      $connection->select_db($database);
+        $connection = mysqli_connect($host, $user, $password);
+        if(!$connection){
+        die("Could not connect: " . mysqli_connect_error());}
+        $connection->select_db($database);
 
-      $sql = "SELECT p.id, p.firstname, p.lastname, s.statename, p.food, v.date_visited
-  		FROM Visits v
-  		INNER JOIN People p ON v.p_id = p.id
-  		INNER JOIN States s ON v.s_id = s.id
-  		WHERE v.p_id =" . $id;
+        $sql = "SELECT p.id, p.firstname, p.lastname, s.statename, p.food, v.date_visited
+            FROM Visits v
+            INNER JOIN People p ON v.p_id = p.id
+            INNER JOIN States s ON v.s_id = s.id
+            WHERE v.p_id =" . $id;
 
-      $query = mysqli_query ($connection, $sql) or die(mysqli_error($connection));
-  		$row = mysqli_fetch_array($query);
-          
-        $id = $row["id"];
-        $firstName = $row["firstname"];
-        $lastName = $row["lastname"];
-        $foodName = $row["food"];
-  		$stateName = $row["statename"];
-        $dateVisit = $row["date_visited"];
+        $query = mysqli_query ($connection, $sql) or die(mysqli_error($connection));
+        //$row = mysqli_fetch_array($query);
 
-      $resultArray[] =
-      [
-          'id'            => $id,
-          'firstname'     => $firstName,
-          'lastname'      => $lastName,
-          'food'          => $foodName,
-          'statename'     => $stateName,
-          'date_visited'  => $dateVisit
-      ];
+        while($row = mysqli_fetch_array($query, true))
+        {
+            $id = $row["id"];
+            $firstName = $row["firstname"];
+            $lastName = $row["lastname"];
+            $foodName = $row["food"];
+            $stateName = $row["statename"];
+            $dateVisit = $row["date_visited"];
 
-      echo json_encode($resultArray, JSON_PRETTY_PRINT);
+            $resultArray[] =
+            [
+                'id'            => $id,
+                'firstname'     => $firstName,
+                'lastname'      => $lastName,
+                'food'          => $foodName,
+                'states'        => $stateName,
+                'visits'        => $dateVisit
+            ];
+        }
+
+        
+
+        echo json_encode($resultArray, JSON_PRETTY_PRINT);
     }
 
     public function save(API_Model_People $people)
