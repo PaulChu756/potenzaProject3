@@ -3,15 +3,19 @@ $(document).ready(function(){
 	zendPopulatePeople();
 	zendPopulateStates();
 	displayData();
+	$("#personForm")[0].reset();
+	$("#visitForm")[0].reset();
 
 	$('#addPersonSubmit').click(function(e){
 		e.preventDefault();
 			addPerson();
+			$("#personForm")[0].reset();
 	});
 
 	$('#addVisitSubmit').click(function(e){
 		e.preventDefault();
 			addVisit();
+			$("#visitForm")[0].reset();
 	});
 });
 
@@ -107,7 +111,7 @@ function addPerson()
 			console.log(data);
 			console.log($("#personForm").serialize());
 			zendPopulatePeople();
-			displayPeopleData();
+			displayData();
 		},
 		error:function(data)
 		{

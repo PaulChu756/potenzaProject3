@@ -47,13 +47,13 @@ class API_Model_PeopleMapper
 
       $query = mysqli_query ($connection, $sql) or die(mysqli_error($connection));
   		$row = mysqli_fetch_array($query);
-
-      $id = $row["id"];
-  		$firstName = $row["firstname"];
-      $lastName = $row["lastname"];
-      $foodName = $row["food"];
+          
+        $id = $row["id"];
+        $firstName = $row["firstname"];
+        $lastName = $row["lastname"];
+        $foodName = $row["food"];
   		$stateName = $row["statename"];
-      $dateVisit = $row["date_visited"];
+        $dateVisit = $row["date_visited"];
 
       $resultArray[] =
       [
